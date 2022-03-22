@@ -28,16 +28,13 @@
                         <th>
                             {{ trans('cruds.job.fields.title') }}
                         </th>
-           
+
                         <th>
                             {{ trans('cruds.job.fields.short_description') }}
                         </th>
 
                         <th>
                             {{ trans('cruds.job.fields.address') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.job.fields.categories') }}
                         </th>
                         <th>
                             {{ trans('cruds.job.fields.salary') }}
@@ -70,11 +67,7 @@
                             <td>
                                 {{ $job->address ?? '' }}
                             </td>
-                            <td>
-                                @foreach($job->categories as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
-                            </td>
+
                             <td>
                                 {{ $job->salary ?? '' }}
                             </td>

@@ -22,20 +22,6 @@ class UpdateJobRequest extends FormRequest
             'title'        => [
                 'required',
             ],
-            'company_id'   => [
-                'required',
-                'integer',
-            ],
-            'location_id'  => [
-                'required',
-                'integer',
-            ],
-            'categories.*' => [
-                'integer',
-            ],
-            'categories'   => [
-                'array',
-            ],
             'salary'       => [
                 'required',
             ],

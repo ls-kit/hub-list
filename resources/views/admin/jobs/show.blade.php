@@ -26,14 +26,7 @@
                             {{ $job->title }}
                         </td>
                     </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.job.fields.company') }}
-                        </th>
-                        <td>
-                            {{ $job->company->name ?? '' }}
-                        </td>
-                    </tr>
+
                     <tr>
                         <th>
                             {{ trans('cruds.job.fields.short_description') }}
@@ -66,14 +59,7 @@
                             {{ $job->job_nature }}
                         </td>
                     </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.job.fields.location') }}
-                        </th>
-                        <td>
-                            {{ $job->location->name ?? '' }}
-                        </td>
-                    </tr>
+
                     <tr>
                         <th>
                             {{ trans('cruds.job.fields.address') }}
@@ -82,16 +68,7 @@
                             {{ $job->address }}
                         </td>
                     </tr>
-                    <tr>
-                        <th>
-                            Categories
-                        </th>
-                        <td>
-                            @foreach($job->categories as $id => $categories)
-                                <span class="label label-info label-many">{{ $categories->name }}</span>
-                            @endforeach
-                        </td>
-                    </tr>
+
                     <tr>
                         <th>
                             {{ trans('cruds.job.fields.salary') }}

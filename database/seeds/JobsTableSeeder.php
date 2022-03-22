@@ -28,8 +28,6 @@ class JobsTableSeeder extends Seeder
             $job->full_description = $faker->paragraph;
             $job->requirements = $faker->paragraph;
             $job->job_nature = "Full-time";
-            $job->company_id = $companies->random();
-            $job->location_id = $locations->random();
             $job->address = $faker->unique()->address;
             $job->salary = "15k - 25k";
             $job->top_rated = rand(0, 1);

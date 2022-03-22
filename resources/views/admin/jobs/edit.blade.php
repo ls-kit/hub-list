@@ -22,19 +22,7 @@
                     {{ trans('cruds.job.fields.title_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('company_id') ? 'has-error' : '' }}">
-                <label for="company">{{ trans('cruds.job.fields.company') }}*</label>
-                <select name="company_id" id="company" class="form-control select2" required>
-                    @foreach($companies as $id => $company)
-                        <option value="{{ $id }}" {{ (isset($job) && $job->company ? $job->company->id : old('company_id')) == $id ? 'selected' : '' }}>{{ $company }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('company_id'))
-                    <em class="invalid-feedback">
-                        {{ $errors->first('company_id') }}
-                    </em>
-                @endif
-            </div>
+
             <div class="form-group {{ $errors->has('short_description') ? 'has-error' : '' }}">
                 <label for="short_description">{{ trans('cruds.job.fields.short_description') }}</label>
                 <input type="text" id="short_description" name="short_description" class="form-control" value="{{ old('short_description', isset($job) ? $job->short_description : '') }}">
@@ -83,19 +71,7 @@
                     {{ trans('cruds.job.fields.job_nature_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('location_id') ? 'has-error' : '' }}">
-                <label for="location">{{ trans('cruds.job.fields.location') }}*</label>
-                <select name="location_id" id="location" class="form-control select2" required>
-                    @foreach($locations as $id => $location)
-                        <option value="{{ $id }}" {{ (isset($job) && $job->location ? $job->location->id : old('location_id')) == $id ? 'selected' : '' }}>{{ $location }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('location_id'))
-                    <em class="invalid-feedback">
-                        {{ $errors->first('location_id') }}
-                    </em>
-                @endif
-            </div>
+
             <div class="form-group {{ $errors->has('address') ? 'has-error' : '' }}">
                 <label for="address">{{ trans('cruds.job.fields.address') }}</label>
                 <input type="text" id="address" name="address" class="form-control" value="{{ old('address', isset($job) ? $job->address : '') }}">
@@ -108,7 +84,7 @@
                     {{ trans('cruds.job.fields.address_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('categories') ? 'has-error' : '' }}">
+            {{-- <div class="form-group {{ $errors->has('categories') ? 'has-error' : '' }}">
                 <label for="categories">{{ trans('cruds.job.fields.categories') }}
                     <span class="btn btn-info btn-xs select-all">{{ trans('global.select_all') }}</span>
                     <span class="btn btn-info btn-xs deselect-all">{{ trans('global.deselect_all') }}</span></label>
@@ -125,7 +101,7 @@
                 <p class="helper-block">
                     {{ trans('cruds.job.fields.categories_helper') }}
                 </p>
-            </div>
+            </div> --}}
             <div class="form-group {{ $errors->has('salary') ? 'has-error' : '' }}">
                 <label for="salary">{{ trans('cruds.job.fields.salary') }}*</label>
                 <input type="text" id="salary" name="salary" class="form-control" value="{{ old('salary', isset($job) ? $job->salary : '') }}" required>

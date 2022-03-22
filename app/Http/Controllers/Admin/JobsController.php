@@ -29,13 +29,7 @@ class JobsController extends Controller
     {
         abort_if(Gate::denies('job_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $categories = Category::all()->pluck('name', 'id');
-
-        return view('admin.jobs.create', compact('companies', 'locations', 'categories'));
+        return view('admin.jobs.create');
     }
 
     public function store(StoreJobRequest $request)
@@ -50,15 +44,7 @@ class JobsController extends Controller
     {
         abort_if(Gate::denies('job_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $companies = Company::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $locations = Location::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $categories = Category::all()->pluck('name', 'id');
-
-        $job->load('company', 'location', 'categories');
-
-        return view('admin.jobs.edit', compact('companies', 'locations', 'categories', 'job'));
+        return view('admin.jobs.edit', compact('job'));
     }
 
     public function update(UpdateJobRequest $request, Job $job)
@@ -72,8 +58,6 @@ class JobsController extends Controller
     public function show(Job $job)
     {
         abort_if(Gate::denies('job_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
-        $job->load('company', 'location', 'categories');
 
         return view('admin.jobs.show', compact('job'));
     }
