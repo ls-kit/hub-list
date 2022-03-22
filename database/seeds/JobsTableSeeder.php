@@ -16,14 +16,13 @@ class JobsTableSeeder extends Seeder
     public function run()
     {
         $categories = Category::pluck('id');
-        $companies = Company::pluck('id');
-        $locations = Location::pluck('id');
         $faker = Faker\Factory::create();
 
         foreach(range(1, 7) as $id)
         {
             $job = new Job;
             $job->title = $faker->unique()->jobTitle;
+            $job->company_name = $faker->unique()->company;
             $job->short_description = $faker->sentence;
             $job->full_description = $faker->paragraph;
             $job->requirements = $faker->paragraph;

@@ -29,6 +29,15 @@
 
                     <tr>
                         <th>
+                            {{ trans('cruds.job.fields.company_name') }}
+                        </th>
+                        <td>
+                            {{ $job->company_name }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
                             {{ trans('cruds.job.fields.short_description') }}
                         </th>
                         <td>
@@ -75,6 +84,22 @@
                         </th>
                         <td>
                             {{ $job->salary }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.job.fields.phone') }}
+                        </th>
+                        <td>
+                            {{ $job->phone }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.job.fields.email') }}
+                        </th>
+                        <td>
+                            {{ $job->email }}
                         </td>
                     </tr>
                     <tr>

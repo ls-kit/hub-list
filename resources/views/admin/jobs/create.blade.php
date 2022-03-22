@@ -1,4 +1,7 @@
 @extends('layouts.admin')
+@section('styles')
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+@endsection
 @section('content')
 
 <div class="card">
@@ -22,6 +25,19 @@
                 </p>
             </div>
 
+            <div class="form-group {{ $errors->has('company_name') ? 'has-error' : '' }}">
+                <label for="company_name">{{ trans('cruds.job.fields.company_name') }}*</label>
+                <input type="text" id="company_name" name="company_name" class="form-control" value="{{ old('company_name', isset($job) ? $job->company_name : '') }}" required>
+                @if($errors->has('company_name'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('company_name') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.job.fields.title_helper') }}
+                </p>
+            </div>
+
             <div class="form-group {{ $errors->has('short_description') ? 'has-error' : '' }}">
                 <label for="short_description">{{ trans('cruds.job.fields.short_description') }}</label>
                 <input type="text" id="short_description" name="short_description" class="form-control" value="{{ old('short_description', isset($job) ? $job->short_description : '') }}">
@@ -36,7 +52,11 @@
             </div>
             <div class="form-group {{ $errors->has('full_description') ? 'has-error' : '' }}">
                 <label for="full_description">{{ trans('cruds.job.fields.full_description') }}</label>
-                <textarea id="full_description" name="full_description" class="form-control ">{{ old('full_description', isset($job) ? $job->full_description : '') }}</textarea>
+
+                <textarea id="full_description" name="full_description" rows="10" cols="80">
+                    {{ old('full_description', isset($job) ? $job->full_description : '') }}
+                </textarea>
+
                 @if($errors->has('full_description'))
                     <em class="invalid-feedback">
                         {{ $errors->first('full_description') }}
@@ -48,7 +68,10 @@
             </div>
             <div class="form-group {{ $errors->has('requirements') ? 'has-error' : '' }}">
                 <label for="requirements">{{ trans('cruds.job.fields.requirements') }}</label>
-                <textarea id="requirements" name="requirements" class="form-control ">{{ old('requirements', isset($job) ? $job->requirements : '') }}</textarea>
+
+                <textarea id="requirements" name="requirements" rows="10" cols="80">
+                    {{ old('requirements', isset($job) ? $job->requirements : '') }}
+                </textarea>
                 @if($errors->has('requirements'))
                     <em class="invalid-feedback">
                         {{ $errors->first('requirements') }}
@@ -96,6 +119,36 @@
                     {{ trans('cruds.job.fields.salary_helper') }}
                 </p>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group {{ $errors->has('phone') ? 'has-error' : '' }}">
+                        <label for="phone">{{ trans('cruds.job.fields.phone') }}</label>
+                        <input type="text" id="phone" name="phone" class="form-control" value="{{ old('phone', isset($job) ? $job->phone : '') }}" required>
+                        @if($errors->has('phone'))
+                            <em class="invalid-feedback">
+                                {{ $errors->first('phone') }}
+                            </em>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('cruds.job.fields.phone_helper') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                        <label for="email">{{ trans('cruds.job.fields.email') }}</label>
+                        <input type="text" id="email" name="email" class="form-control" value="{{ old('email', isset($job) ? $job->email : '') }}" required>
+                        @if($errors->has('email'))
+                            <em class="invalid-feedback">
+                                {{ $errors->first('email') }}
+                            </em>
+                        @endif
+                        <p class="helper-block">
+                            {{ trans('cruds.job.fields.salary_helper') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="form-group {{ $errors->has('top_rated') ? 'has-error' : '' }}">
                 <label for="top_rated">{{ trans('cruds.job.fields.top_rated') }}</label>
                 <input name="top_rated" type="hidden" value="0">
@@ -118,3 +171,11 @@
     </div>
 </div>
 @endsection
+
+@section('scripts')
+<script>
+    CKEDITOR.replace( 'full_description' );
+    CKEDITOR.replace( 'requirements' );
+</script>
+@endsection
+

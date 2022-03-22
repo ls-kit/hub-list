@@ -22,8 +22,14 @@ class UpdateJobRequest extends FormRequest
             'title'        => [
                 'required',
             ],
+            'company_name'   => [
+                'required',
+            ],
             'salary'       => [
                 'required',
+            ],
+            'email'        => [
+                'email',
             ],
         ];
     }

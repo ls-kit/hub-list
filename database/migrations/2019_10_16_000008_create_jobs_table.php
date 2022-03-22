@@ -12,6 +12,8 @@ class CreateJobsTable extends Migration
             $table->increments('id');
 
             $table->string('title');
+            
+            $table->string('company_name');
 
             $table->string('short_description')->nullable();
 
@@ -26,6 +28,10 @@ class CreateJobsTable extends Migration
             $table->boolean('top_rated')->default(0)->nullable();
 
             $table->string('salary');
+
+            $table->string('phone')->nullable();
+
+            $table->string('email')->nullable();
 
             $table->timestamps();
 

@@ -148,7 +148,13 @@ return [
             'categories'               => 'Categories',
             'categories_helper'        => '',
             'salary'                   => 'Salary',
+            'phone_helper'             => '',
+            'phone'                    => 'Phone',
             'salary_helper'            => '',
+            'email'                    => 'Email',
+            'email_helper'             => '',
+            'company_name'             => 'Company Name',
+            'company_name_helper'      => '',
         ],
     ],
 ];
