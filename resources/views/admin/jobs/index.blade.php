@@ -28,15 +28,11 @@
                         <th>
                             {{ trans('cruds.job.fields.title') }}
                         </th>
-                        <th>
-                            {{ trans('cruds.job.fields.company') }}
-                        </th>
+           
                         <th>
                             {{ trans('cruds.job.fields.short_description') }}
                         </th>
-                        <th>
-                            {{ trans('cruds.job.fields.location') }}
-                        </th>
+
                         <th>
                             {{ trans('cruds.job.fields.address') }}
                         </th>
@@ -66,15 +62,11 @@
                             <td>
                                 {{ $job->title ?? '' }}
                             </td>
-                            <td>
-                                {{ $job->company->name ?? '' }}
-                            </td>
+
                             <td>
                                 {{ $job->short_description ?? '' }}
                             </td>
-                            <td>
-                                {{ $job->location->name ?? '' }}
-                            </td>
+
                             <td>
                                 {{ $job->address ?? '' }}
                             </td>

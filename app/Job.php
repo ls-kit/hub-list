@@ -33,10 +33,10 @@ class Job extends Model
         'short_description',
     ];
 
-    public function company()
-    {
-        return $this->belongsTo(Company::class, 'company_id');
-    }
+    // public function company()
+    // {
+    //     return $this->belongsTo(Company::class, 'company_id');
+    // }
 
     public function location()
     {
