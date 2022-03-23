@@ -20,9 +20,10 @@
     @inertiaHead
   </head>
   <body>
-      
+
     @inertia
 
+    @routes
      <!-- inject:js-->
      <script src="{{asset("frontend/vendor_assets/js/jquery/jquery-1.12.3.js")}}"></script>
      <script src="{{asset("frontend/vendor_assets/js/bootstrap/popper.js")}}"></script>

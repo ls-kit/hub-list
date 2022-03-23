@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
 
@@ -10,6 +12,10 @@ Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
 Route::get('category/{category}', 'CategoryController@show')->name('categories.show');
 Route::get('location/{location}', 'LocationController@show')->name('locations.show');
+
+/** Frontend login register */
+Route::post('frontend/login', [AuthController::class, 'login'])->name('frontend.login');
+Route::post('frontend/login', [AuthController::class, 'register'])->name('frontend.register');
 
 
 /**

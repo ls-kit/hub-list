@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '95b32fb5ea37d4e1422e976774738f0205094d3c',
+    'reference' => '1e03784a176c5117618817f73985d658fda57850',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -523,7 +523,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '95b32fb5ea37d4e1422e976774738f0205094d3c',
+      'reference' => '1e03784a176c5117618817f73985d658fda57850',
     ),
     'laravel/passport' => 
     array (
@@ -1543,6 +1543,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '34a41e998c2183e22995f158c581e7b5e755ab9e',
+    ),
+    'tightenco/ziggy' => 
+    array (
+      'pretty_version' => 'v1.4.4',
+      'version' => '1.4.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ad1b6590978efe3ec36ca404e91f8acaa6c742bd',
     ),
     'tijsverkoyen/css-to-inline-styles' => 
     array (
