@@ -20,7 +20,8 @@ export default {
         ListingSection,
         FooterSection,
 
-    }
+    },
+
 
 }
 </script>

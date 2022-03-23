@@ -10,7 +10,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="/" id="signup-form">
+                    <form id="signup-form" @submit.prevent="handleRegister">
                         <span v-if="errors.phone">{{errors.phone[0]}}</span>
                         <input v-model="form.phone" type="phone" class="form-control" placeholder="Phone" required>
 
@@ -41,6 +41,7 @@
 
 import { Inertia } from '@inertiajs/inertia'
 import axios from 'axios';
+import $ from 'jquery';
 
 export default {
 
@@ -58,8 +59,11 @@ export default {
         handleRegister() {
             axios.post(route('frontend.register'), this.form)
                 .then(response => {
-
-
+                    // hide signup_modal with raw js
+                    $('.modal-backdrop').remove();
+                    $('body').removeClass('modal-open');
+                    $('body').css('padding-right', '0px');
+                    this.$inertia.get(`/`);
                 })
                 .catch(error => {
                     this.errors = error.response.data.errors;

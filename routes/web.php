@@ -16,6 +16,7 @@ Route::get('location/{location}', 'LocationController@show')->name('locations.sh
 /** Frontend login register */
 Route::post('frontend/login', [AuthController::class, 'login'])->name('frontend.login');
 Route::post('frontend/login', [AuthController::class, 'register'])->name('frontend.register');
+Route::get('frontend/login', [AuthController::class, 'register'])->name('frontendd.register');
 
 
 /**

@@ -17,9 +17,8 @@ class AuthController extends Controller
 
     public function register()
     {
-        // return redirect()->route('show');
-
         return true;
+
     //    return User::create([
     //         'phone' => $request->phone,
     //         'password' => bcrypt($request->password),
