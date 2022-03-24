@@ -137,7 +137,7 @@ export default {
         async logoutUser() {
             await axios.get(route('frontend.logout'))
                 .then((response) => {
-                    this.$page.props.auth = false;
+                    this.$page.props.authCheck = false;
                     this.$toast.success(response.data.message);
                 })
                 .catch((error) => {

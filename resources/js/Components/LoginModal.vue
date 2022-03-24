@@ -11,8 +11,11 @@
                 </div>
                 <div class="modal-body">
                     <form  id="login-form" @submit.prevent="handleLogin">
-                        <input type="text" class="form-control" v-model="from.phone" placeholder="Phone" required>
-                        <input type="password" class="form-control" v-model="from.password" placeholder="Password" required>
+                        <span class='text-danger' v-if="errors.phone">{{errors.phone[0]}}</span>
+                        <input type="text" class="form-control" v-model="form.phone" placeholder="Phone" required>
+
+                        <span class='text-danger' v-if="errors.password">{{errors.password[0]}}</span>
+                        <input type="password" class="form-control" v-model="form.password" placeholder="Password" required>
                         <div class="keep_signed custom-control custom-checkbox checkbox-outline checkbox-outline-primary">
                             <input type="checkbox" class="custom-control-input" name="keep_signed_in" value="1" id="keep_signed_in">
                             <label for="keep_signed_in" class="not_empty custom-control-label">Keep me signed in</label>
@@ -51,18 +54,26 @@ export default {
     },
     methods: {
         async handleLogin() {
-            await axios.post(route('frontend.login'), this.from)
+            await axios.post(route('frontend.login'), this.form)
                 .then(response => {
                     if (response.data.status == 'success') {
-
-
-                    } else {
-                        // this.errors = response.data.errors;
-                        this.$toast.error(error.response.data.message);
+                        /* hide signup modal */
+                        $('.modal-backdrop').remove();
+                        $('body').removeClass('modal-open');
+                        $('body').css('padding-right', '0px');
+                        this.$toast.success('Successfully registered');
+                        /* redirect to path*/
+                        this.$inertia.get(`/`);
                     }
                 })
                 .catch(error => {
-                    this.errors = error.response.data.errors;
+                    if(error.response.data.status == 'error') {
+                        this.$toast.error(error.response.data.message);
+                        this.form.password = '';
+                    }else{
+                        this.errors = error.response.data.errors;
+                    }
+
                 });
         }
     }

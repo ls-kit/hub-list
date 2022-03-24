@@ -11,16 +11,16 @@
                 </div>
                 <div class="modal-body">
                     <form id="signup-form" @submit.prevent="handleRegister">
-                        <span v-if="errors.name">{{errors.name[0]}}</span>
+                        <span class='text-danger' v-if="errors.name">{{errors.name[0]}}</span>
                         <input v-model="form.name" type="text" class="form-control" placeholder="Name" required>
 
-                        <span v-if="errors.phone">{{errors.phone[0]}}</span>
+                        <span class='text-danger' v-if="errors.phone">{{errors.phone[0]}}</span>
                         <input v-model="form.phone" type="phone" class="form-control" placeholder="Phone" required>
 
-                        <span v-if="errors.password">{{errors.password[0]}}</span>
+                        <span class='text-danger' v-if="errors.password">{{errors.password[0]}}</span>
                         <input v-model="form.password" type="password" class="form-control" placeholder="Password" required>
 
-                        <span v-if="errors.password_confirmation">{{errors.password_confirmation[0]}}</span>
+                        <span class='text-danger' v-if="errors.password_confirmation">{{errors.password_confirmation[0]}}</span>
                         <input v-model="form.password_confirmation" type="password" class="form-control" placeholder="Confirm Password" required>
                         <button type="submit" class="btn btn-block btn-lg btn-gradient btn-gradient-two">Sign Up</button>
                     </form>

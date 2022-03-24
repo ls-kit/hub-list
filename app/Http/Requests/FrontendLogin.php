@@ -24,7 +24,7 @@ class FrontendLogin extends FormRequest
     public function rules()
     {
         return [
-            'phone' => ['required', 'number', 'digits:11', 'exists:users,phone'],
+            'phone' => ['required', 'numeric', 'digits:11', 'exists:users,phone'],
             'password' => ['required', 'string', 'min:6'],
         ];
     }

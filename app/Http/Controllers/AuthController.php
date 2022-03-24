@@ -26,7 +26,7 @@ class AuthController extends Controller
         }
 
         return response()->json([
-            'message' => 'Login failed',
+            'message' => 'Login failed - invalid credentials',
             'status' => 'error'
         ], 401);
 

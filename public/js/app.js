@@ -21121,13 +21121,28 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios.post(route('frontend.login'), _this.from).then(function (response) {
-                  if (response.data.status == 'success') {} else {
-                    // this.errors = response.data.errors;
-                    _this.$toast.error(error.response.data.message);
+                return axios.post(route('frontend.login'), _this.form).then(function (response) {
+                  if (response.data.status == 'success') {
+                    /* hide signup modal */
+                    $('.modal-backdrop').remove();
+                    $('body').removeClass('modal-open');
+                    $('body').css('padding-right', '0px');
+
+                    _this.$toast.success('Successfully registered');
+                    /* redirect to path*/
+
+
+                    /* redirect to path*/
+                    _this.$inertia.get("/");
                   }
                 })["catch"](function (error) {
-                  _this.errors = error.response.data.errors;
+                  if (error.response.data.status == 'error') {
+                    _this.$toast.error(error.response.data.message);
+
+                    _this.form.password = '';
+                  } else {
+                    _this.errors = error.response.data.errors;
+                  }
                 });
 
               case 2:
@@ -21194,7 +21209,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return axios__WEBPACK_IMPORTED_MODULE_3___default().get(route('frontend.logout')).then(function (response) {
-                  _this.$page.props.auth = false;
+                  _this.$page.props.authCheck = false;
 
                   _this.$toast.success(response.data.message);
                 })["catch"](function (error) {
@@ -21449,8 +21464,16 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVN
 var _hoisted_5 = {
   "class": "modal-body"
 };
+var _hoisted_6 = {
+  key: 0,
+  "class": "text-danger"
+};
+var _hoisted_7 = {
+  key: 1,
+  "class": "text-danger"
+};
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "keep_signed custom-control custom-checkbox checkbox-outline checkbox-outline-primary"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   type: "checkbox",
@@ -21465,7 +21488,7 @@ var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   type: "submit",
   "class": "btn btn-block btn-lg btn-gradient btn-gradient-two"
 }, "Sign In", -1
@@ -21478,27 +21501,31 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onSubmit: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.handleLogin && $options.handleLogin.apply($options, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, [$data.errors.phone ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.phone[0]), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "class": "form-control",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return _ctx.from.phone = $event;
+      return $data.form.phone = $event;
     }),
     placeholder: "Phone",
     required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.from.phone]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.phone]]), $data.errors.password ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.errors.password[0]), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "password",
     "class": "form-control",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
-      return _ctx.from.password = $event;
+      return $data.form.password = $event;
     }),
     placeholder: "Password",
     required: ""
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.from.password]]), _hoisted_6, _hoisted_7], 32
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.form.password]]), _hoisted_8, _hoisted_9], 32
   /* HYDRATE_EVENTS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("\n                    <div class=\"form-excerpts\">\n                        <ul class=\"list-unstyled\">\n                            <li>Not a member? <a href=\"\">Sign up</a></li>\n                            <li><a href=\"\">Recover Password</a></li>\n                        </ul>\n                        <div class=\"social-login\">\n                            <span>Or connect with</span>\n                            <p><a href=\"\" class=\"btn btn-outline-secondary\"><i class=\"fab fa-facebook-f\"></i> Facebook</a><a href=\"\" class=\"btn btn-outline-danger\"><i class=\"fab fa-google-plus-g\"></i> Google</a></p>\n                        </div>\n                    </div>\n                    ")])])])])]);
 }
@@ -21731,16 +21758,20 @@ var _hoisted_5 = {
   "class": "modal-body"
 };
 var _hoisted_6 = {
-  key: 0
+  key: 0,
+  "class": "text-danger"
 };
 var _hoisted_7 = {
-  key: 1
+  key: 1,
+  "class": "text-danger"
 };
 var _hoisted_8 = {
-  key: 2
+  key: 2,
+  "class": "text-danger"
 };
 var _hoisted_9 = {
-  key: 3
+  key: 3,
+  "class": "text-danger"
 };
 
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
