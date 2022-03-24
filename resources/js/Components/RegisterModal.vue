@@ -11,6 +11,9 @@
                 </div>
                 <div class="modal-body">
                     <form id="signup-form" @submit.prevent="handleRegister">
+                        <span v-if="errors.name">{{errors.name[0]}}</span>
+                        <input v-model="form.name" type="text" class="form-control" placeholder="Name" required>
+
                         <span v-if="errors.phone">{{errors.phone[0]}}</span>
                         <input v-model="form.phone" type="phone" class="form-control" placeholder="Phone" required>
 
@@ -21,6 +24,7 @@
                         <input v-model="form.password_confirmation" type="password" class="form-control" placeholder="Confirm Password" required>
                         <button type="submit" class="btn btn-block btn-lg btn-gradient btn-gradient-two">Sign Up</button>
                     </form>
+                    <!--
                     <div class="form-excerpts">
                         <ul class="list-unstyled">
                             <li>Already a member? <a href="">Sign In</a></li>
@@ -31,6 +35,7 @@
                             <p><a href="" class="btn btn-outline-secondary"><i class="fab fa-facebook-f"></i> Facebook</a><a href="" class="btn btn-outline-danger"><i class="fab fa-google-plus-g"></i> Google</a></p>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
@@ -49,6 +54,7 @@ export default {
         return {
             errors: {},
             form: {
+                name: '',
                 phone: '',
                 password: '',
                 password_confirmation: '',
@@ -56,13 +62,15 @@ export default {
         }
     },
     methods: {
-        handleRegister() {
-            axios.post(route('frontend.register'), this.form)
+       async handleRegister() {
+          await axios.post(route('frontend.register'), this.form)
                 .then(response => {
-                    // hide signup_modal with raw js
+                    /* hide signup modal */
                     $('.modal-backdrop').remove();
                     $('body').removeClass('modal-open');
                     $('body').css('padding-right', '0px');
+
+                    /* redirect to path*/
                     this.$inertia.get(`/`);
                 })
                 .catch(error => {

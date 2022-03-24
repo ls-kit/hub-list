@@ -24,7 +24,8 @@ class FrontendRegister extends FormRequest
     public function rules()
     {
         return [
-            'phone' => 'required|unique:users',
+            'name' => 'required|string|max:255',
+            'phone' => 'required|unique:users|numeric',
             'password' => 'required|confirmed',
         ];
     }

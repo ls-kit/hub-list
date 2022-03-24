@@ -57,12 +57,12 @@
                                         <div class="author-area">
                                             <div class="author__access_area">
                                                 <ul class="d-flex list-unstyled align-items-center">
-                                                    <li>
+                                                    <li v-if="$page.props.auth">
                                                         <a href="add-listing.html" class="btn btn-xs btn-gradient btn-gradient-two">
                                                             <span class="la la-plus"></span> Add Listing
                                                         </a>
                                                     </li>
-                                                    <li>
+                                                    <li v-if="!$page.props.auth" >
                                                         <a href="" class="access-link" data-toggle="modal" data-target="#login_modal">Login</a>
                                                         <span>or</span>
                                                         <a href="" class="access-link" data-toggle="modal" data-target="#signup_modal">Register</a>
@@ -71,19 +71,20 @@
                                             </div>
                                         </div>
                                         <!-- end .author-area -->
-                                        <div class="offcanvas-menu d-none">
-                                            <a href="" class="offcanvas-menu__user"><i class="la la-user"></i></a>
-                                            <div class="offcanvas-menu__contents">
-                                                <a href="" class="offcanvas-menu__close"><i class="la la-times-circle"></i></a>
+
+                                        <div v-if="$page.props.auth" class="offcanvas-menu " >
+
+                                            <button @click="toggleSideBar" class="offcanvas-menu__user"><i class="la la-user"></i></button>
+                                            <div class="offcanvas-menu__contents" :class="toggle ? 'active' : ''">
+                                                <button class="offcanvas-menu__close" @click="toggleSideBar"><i class="la la-times-circle"></i></button>
                                                 <div class="author-avatar">
                                                     <img src="img/author-avatar.png" alt="" class="rounded-circle">
                                                 </div>
                                                 <ul class="list-unstyled">
-                                                    <li><a href="dashboard-listings.html">My Profile</a></li>
-                                                    <li><a href="dashboard-listings.html">My Listing</a></li>
-                                                    <li><a href="dashboard-listings.html">Favorite Listing</a></li>
-                                                    <li><a href="add-listing.html">Add Listing</a></li>
-                                                    <li><a href="">Logout</a></li>
+                                                    <li><a href="javascript:void(0);">My Profile</a></li>
+                                                    <li><a href="javascript:void(0);">My Listing</a></li>
+                                                    <li><a href="javascript:void(0);">Add Listing</a></li>
+                                                    <li><a href="javascript:void(0);">Logout</a></li>
                                                 </ul>
                                                 <div class="search_area">
                                                     <form action="/">
@@ -95,6 +96,7 @@
                                                 </div><!-- ends: .search_area -->
                                             </div><!-- ends: .author-info -->
                                         </div><!-- ends: .offcanvas-menu -->
+
                                     </div><!-- ends: .menu-right -->
                                 </div>
                             </div>
@@ -113,10 +115,26 @@
 <script>
 import LoginModal from './LoginModal.vue';
 import RegisterModal from './RegisterModal.vue';
+import axios from 'axios';
+
 export default {
     components: {
         LoginModal,
         RegisterModal
+    },
+    data() {
+        return {
+            toggle: false
+        }
+    },
+    methods: {
+        toggleSideBar() {
+            this.toggle = !this.toggle;
+        }
+
+            // async logoutUser(){
+            //     await axios
+            // }
     }
 }
 </script>
