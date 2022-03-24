@@ -57,12 +57,12 @@
                                         <div class="author-area">
                                             <div class="author__access_area">
                                                 <ul class="d-flex list-unstyled align-items-center">
-                                                    <li v-if="$page.props.auth">
+                                                    <li v-if="$page.props.authCheck">
                                                         <a href="add-listing.html" class="btn btn-xs btn-gradient btn-gradient-two">
                                                             <span class="la la-plus"></span> Add Listing
                                                         </a>
                                                     </li>
-                                                    <li v-if="!$page.props.auth" >
+                                                    <li v-if="!$page.props.authCheck" >
                                                         <a href="" class="access-link" data-toggle="modal" data-target="#login_modal">Login</a>
                                                         <span>or</span>
                                                         <a href="" class="access-link" data-toggle="modal" data-target="#signup_modal">Register</a>
@@ -72,7 +72,7 @@
                                         </div>
                                         <!-- end .author-area -->
 
-                                        <div v-if="$page.props.auth" class="offcanvas-menu " >
+                                        <div v-if="$page.props.authCheck" class="offcanvas-menu " >
 
                                             <button @click="toggleSideBar" class="offcanvas-menu__user"><i class="la la-user"></i></button>
                                             <div class="offcanvas-menu__contents" :class="toggle ? 'active' : ''">
@@ -84,7 +84,7 @@
                                                     <li><a href="javascript:void(0);">My Profile</a></li>
                                                     <li><a href="javascript:void(0);">My Listing</a></li>
                                                     <li><a href="javascript:void(0);">Add Listing</a></li>
-                                                    <li><a href="javascript:void(0);">Logout</a></li>
+                                                    <li><a href="javascript:void(0);" @click="logoutUser">Logout</a></li>
                                                 </ul>
                                                 <div class="search_area">
                                                     <form action="/">
@@ -127,14 +127,24 @@ export default {
             toggle: false
         }
     },
+
     methods: {
         toggleSideBar() {
             this.toggle = !this.toggle;
+             console.log(this.$page)
+        },
+
+        async logoutUser() {
+            await axios.get(route('frontend.logout'))
+                .then((response) => {
+                    this.$page.props.auth = false;
+                    this.$toast.success(response.data.message);
+                })
+                .catch((error) => {
+                    this.$toast.error(error.response.data.message);
+                });
         }
 
-            // async logoutUser(){
-            //     await axios
-            // }
     }
 }
 </script>

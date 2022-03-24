@@ -2,17 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FrontendLogin;
 use App\Http\Requests\FrontendRegister;
 use App\User;
-use Facade\FlareClient\Http\Response;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
-use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
+
 
 class AuthController extends Controller
 {
-    public function login(Request $request)
+    public function login(FrontendLogin $request)
     {
+        $phone = $request->input('phone');
+        $password = $request->input('password');
+
+        if(Auth::attempt(['phone' => $phone, 'password' => $password])) {
+            // login the user
+            auth()->login(User::where('phone', $phone)->first());
+
+            return response()->json([
+                'message' => 'Login successful',
+                'status' => 'success'
+            ], 200);
+        }
+
+        return response()->json([
+            'message' => 'Login failed',
+            'status' => 'error'
+        ], 401);
 
     }
 
@@ -34,7 +50,7 @@ class AuthController extends Controller
         return $user;
     }
 
-    public function logout()
+    public function logout(): object
     {
         auth()->logout();
         return response()->json(['message' => 'Logged out successfully']);

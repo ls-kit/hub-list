@@ -70,6 +70,8 @@ export default {
                     $('body').removeClass('modal-open');
                     $('body').css('padding-right', '0px');
 
+                    this.$toast.success('Successfully registered');
+
                     /* redirect to path*/
                     this.$inertia.get(`/`);
                 })

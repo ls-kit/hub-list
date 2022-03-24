@@ -10,15 +10,16 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="/" id="login-form">
-                        <input type="text" class="form-control" placeholder="Username or Email" required>
-                        <input type="password" class="form-control" placeholder="Password" required>
+                    <form  id="login-form" @submit.prevent="handleLogin">
+                        <input type="text" class="form-control" v-model="from.phone" placeholder="Phone" required>
+                        <input type="password" class="form-control" v-model="from.password" placeholder="Password" required>
                         <div class="keep_signed custom-control custom-checkbox checkbox-outline checkbox-outline-primary">
                             <input type="checkbox" class="custom-control-input" name="keep_signed_in" value="1" id="keep_signed_in">
                             <label for="keep_signed_in" class="not_empty custom-control-label">Keep me signed in</label>
                         </div>
                         <button type="submit" class="btn btn-block btn-lg btn-gradient btn-gradient-two">Sign In</button>
                     </form>
+                    <!--
                     <div class="form-excerpts">
                         <ul class="list-unstyled">
                             <li>Not a member? <a href="">Sign up</a></li>
@@ -29,6 +30,7 @@
                             <p><a href="" class="btn btn-outline-secondary"><i class="fab fa-facebook-f"></i> Facebook</a><a href="" class="btn btn-outline-danger"><i class="fab fa-google-plus-g"></i> Google</a></p>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
@@ -38,7 +40,32 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+            errors: {},
+            form: {
+                phone: '',
+                password: '',
+            },
+        };
+    },
+    methods: {
+        async handleLogin() {
+            await axios.post(route('frontend.login'), this.from)
+                .then(response => {
+                    if (response.data.status == 'success') {
 
+
+                    } else {
+                        // this.errors = response.data.errors;
+                        this.$toast.error(error.response.data.message);
+                    }
+                })
+                .catch(error => {
+                    this.errors = error.response.data.errors;
+                });
+        }
+    }
 }
 </script>
 <style lang="">
