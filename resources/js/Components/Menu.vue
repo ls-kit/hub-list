@@ -9,7 +9,7 @@
                                 <div class="menu-fullwidth">
                                     <div class="logo-wrapper order-lg-0 order-sm-1">
                                         <div class="logo logo-top">
-                                            <a href="index.html"><img src="img/logo-white.png" alt="logo image" class="img-fluid"></a>
+                                            <Link href="/"><img src="frontend/img/logo-white.png" alt="logo image" class="img-fluid"></Link>
                                         </div>
                                     </div><!-- ends: .logo-wrapper -->
                                     <div class="menu-container order-lg-1 order-sm-0">
@@ -22,7 +22,7 @@
                                                 <div class="collapse navbar-collapse" id="direo-navbar-collapse">
                                                     <ul class="navbar-nav">
                                                         <li>
-                                                            <a href="index.html">Home</a>
+                                                            <Link href="/">Home</Link>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -33,14 +33,7 @@
                                     <div class="menu-right order-lg-2 order-sm-2">
                                         <div class="search-wrapper">
                                             <div class="nav_right_module search_module">
-                                                <span class="icon-left" id="basic-addon9"><i class="la la-search"></i></span>
-                                                <div class="search_area">
-                                                    <form action="/">
-                                                        <div class="input-group input-group-light">
-                                                            <input type="text" class="form-control search_field top-search-field" placeholder="What are you looking for?" autocomplete="off">
-                                                        </div>
-                                                    </form>
-                                                </div>
+
                                             </div>
                                             <div class="search-categories">
                                                 <ul class="list-unstyled">
@@ -58,9 +51,9 @@
                                             <div class="author__access_area">
                                                 <ul class="d-flex list-unstyled align-items-center">
                                                     <li v-if="$page.props.authCheck">
-                                                        <a href="add-listing.html" class="btn btn-xs btn-gradient btn-gradient-two">
+                                                        <Link href="/add-listing"  class="btn btn-xs btn-gradient btn-gradient-two">
                                                             <span class="la la-plus"></span> Add Listing
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li v-if="!$page.props.authCheck" >
                                                         <a href="" class="access-link" data-toggle="modal" data-target="#login_modal">Login</a>
@@ -74,9 +67,9 @@
 
                                         <div v-if="$page.props.authCheck" class="offcanvas-menu " >
 
-                                            <button @click="toggleSideBar" class="offcanvas-menu__user"><i class="la la-user"></i></button>
+                                            <a href="javascript:void(0);" @click="toggleSideBar" class="offcanvas-menu__user"><i class="la la-user"></i></a>
                                             <div class="offcanvas-menu__contents" :class="toggle ? 'active' : ''">
-                                                <button class="offcanvas-menu__close" @click="toggleSideBar"><i class="la la-times-circle"></i></button>
+                                                <a href="javascript:void(0);" class="offcanvas-menu__close" @click="toggleSideBar"><i class="la la-times-circle"></i></a>
                                                 <div class="author-avatar">
                                                     <img src="img/author-avatar.png" alt="" class="rounded-circle">
                                                 </div>
@@ -116,11 +109,13 @@
 import LoginModal from './LoginModal.vue';
 import RegisterModal from './RegisterModal.vue';
 import axios from 'axios';
+import { Link } from '@inertiajs/inertia-vue3'
 
 export default {
     components: {
         LoginModal,
-        RegisterModal
+        RegisterModal,
+        Link
     },
     data() {
         return {

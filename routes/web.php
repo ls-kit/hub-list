@@ -7,6 +7,7 @@ Auth::routes(['register' => false]);
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/show', 'HomeController@show')->name('show');
+Route::get('/add-listing', 'HomeController@addListing')->name('addlisting');
 
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);

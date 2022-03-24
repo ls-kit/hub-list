@@ -35,6 +35,11 @@ class HomeController extends Controller
         return Inertia::render('Listing');
     }
 
+    public function addListing()
+    {
+        return Inertia::render('AddListing');
+    }
+
     public function search(Request $request)
     {
         $jobs = Job::with('company')
