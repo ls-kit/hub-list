@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Requests\StoreJobListing;
+use App\Http\Requests\StoreJobRequest;
 use App\Location;
 use App\Job;
 use Illuminate\Http\Request;
@@ -38,6 +40,15 @@ class HomeController extends Controller
     public function addListing()
     {
         return Inertia::render('AddListing');
+    }
+
+    public function storeListing(StoreJobListing $request)
+    {
+        $job = Job::create($request->validated());
+
+        return response()->json([
+            'message' => 'Job listing successfully created',
+        ]);
     }
 
     public function search(Request $request)

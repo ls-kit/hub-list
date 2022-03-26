@@ -33,31 +33,48 @@
                             <form action="/">
                                 <div class="form-group">
                                     <label for="title" class="form-label">Job Title</label>
-                                    <input type="text" class="form-control" id="title" placeholder="Enter Title" required>
+                                    <input type="text" v-model="form.title" class="form-control" id="title" placeholder="Enter Title" required>
+                                    <span class='text-danger' v-if="errors.title">{{errors.title[0]}}</span>
+
                                 </div>
                                 <div class="form-group">
                                     <label for="title" class="form-label">Company Name</label>
-                                    <input type="text" class="form-control" id="title" placeholder="Enter Title" required>
+                                    <input type="text" v-model="form.company_name" class="form-control" id="title" placeholder="Enter Title" required>
+                                    <span class='text-danger' v-if="errors.company_name">{{errors.company_name[0]}}</span>
+
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="title" class="form-label">Shot Description</label>
-                                    <input type="text" class="form-control" id="shot_description" placeholder="Short Description" required>
+                                    <label for="title" class="form-label">Short Description</label>
+                                    <input type="text" v-model="form.short_description" class="form-control" id="shot_description" placeholder="Short Description" required>
+                                    <span class='text-danger' v-if="errors.short_description">{{errors.short_description[0]}}</span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="desc" class="form-label">Long Description</label>
-                                    <textarea id="desc" rows="8" class="form-control" placeholder="Description"></textarea>
+                                    <label for="desc" class="form-label">Full Description</label>
+                                    <textarea id="desc" v-model="form.full_description" rows="8" class="form-control" placeholder="Description" required></textarea>
+                                    <span class='text-danger' v-if="errors.full_description">{{errors.full_description[0]}}</span>
+
                                 </div>
 
                                 <div class="form-group">
                                     <label for="desc" class="form-label">Requirement</label>
-                                    <textarea id="desc" rows="8" class="form-control" placeholder="Requirement"></textarea>
+                                    <textarea id="desc" v-model="form.requirements" rows="8" class="form-control" placeholder="Requirement" required></textarea>
+                                    <span class='text-danger' v-if="errors.requirements">{{errors.requirements[0]}}</span>
+
                                 </div>
 
                                 <div class="form-group">
                                     <label for="title" class="form-label">Job Nature</label>
-                                    <input type="text" class="form-control" id="job_nature" placeholder="eg: Full Time" required>
+                                    <input type="text" v-model="form.job_nature" class="form-control" id="job_nature" placeholder="eg: Full Time" required>
+                                    <span class='text-danger' v-if="errors.job_nature">{{errors.job_nature[0]}}</span>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="title" class="form-label">Salary Range</label>
+                                    <input type="text" v-model="form.salary" class="form-control" id="salary" placeholder="Salary" required>
+                                    <span class='text-danger' v-if="errors.salary">{{errors.salary[0]}}</span>
                                 </div>
 
 
@@ -83,15 +100,20 @@
                             -->
                                 <div class="form-group">
                                     <label for="address" class="form-label">Address</label>
-                                    <input type="text" placeholder="Listing Address eg. Houghton Street London WC2A 2AE UK" id="address" class="form-control" required>
+                                    <input type="text" v-model="form.address" placeholder="Listing Address eg. Houghton Street London WC2A 2AE UK" id="address" class="form-control">
+                                    <span class='text-danger' v-if="errors.address">{{errors.address[0]}}</span>
+
                                 </div>
                                 <div class="form-group">
                                     <label for="phone_number" class="form-label">Phone Number</label>
-                                    <input type="text" placeholder="Phone Number" id="phone_number" class="form-control" required>
+                                    <input type="text" v-model="form.phone" placeholder="Phone Number" id="phone_number" class="form-control">
+                                    <span class='text-danger' v-if="errors.phone">{{errors.phone[0]}}</span>
+
                                 </div>
                                 <div class="form-group">
                                     <label for="contact_email" class="form-label">Email</label>
-                                    <input type="email" id="contact_email" class="form-control" placeholder="Enter Email" required>
+                                    <input type="email" v-model="form.email" id="contact_email" class="form-control" placeholder="Enter Email" required>
+                                    <span class='text-danger' v-if="errors.email">{{errors.email[0]}}</span>
                                 </div>
 
 
@@ -106,7 +128,7 @@
                         <label for="listing_t" class="not_empty custom-control-label">I Agree with all <a href="" id="listing_t_c">Terms & Conditions</a></label>
                     </div>
                     <div class="btn_wrap list_submit m-top-25">
-                        <button type="submit" class="btn btn-primary btn-lg listing_submit_btn">Submit listing</button>
+                        <button @click="handelSubmit" class="btn btn-primary btn-lg listing_submit_btn">Submit listing</button>
                     </div>
                 </div><!-- ends: .col-lg-10 -->
             </div>
@@ -119,8 +141,42 @@ import MainMenu from '../Components/Menu.vue'
 export default {
     components: {
         MainMenu,
-    }
+    },
+    data(){
+        return {
+            errors: {},
+            form: {
+                title: '',
+                salary: '',
+                address: '',
+                job_nature: '',
+                requirements: '',
+                full_description: '',
+                short_description: '',
+                phone: '',
+                email: '',
+                company_name: '',
+            },
+        }
+    },
+        methods: {
+            async handelSubmit() {
+                await axios.post(route('storelisting'), this.form)
+                    .then(response => {
+                        this.$toast.success(response.data.message);
+                        /* redirect to path*/
+                        this.$inertia.get(`/`);
+                    })
+                    .catch(error => {
+                        this.$toast.error('Something went wrong');
+                        this.errors = error.response.data.errors;
+                    });
+            }
+        },
+
+
 }
+
 </script>
 <style lang="">
 

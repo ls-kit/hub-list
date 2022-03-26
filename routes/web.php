@@ -7,7 +7,8 @@ Auth::routes(['register' => false]);
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/show', 'HomeController@show')->name('show');
-Route::get('/add-listing', 'HomeController@addListing')->name('addlisting');
+Route::get('/add-listing', 'HomeController@addListing')->name('addlisting')->middleware('auth');
+Route::post('/store-listing', 'HomeController@storeListing')->name('storelisting')->middleware('auth');
 
 Route::get('search', 'HomeController@search')->name('search');
 Route::resource('jobs', 'JobController')->only(['index', 'show']);
