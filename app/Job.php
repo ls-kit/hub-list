@@ -32,6 +32,7 @@ class Job extends Model
         'phone',
         'email',
         'company_name',
+        'user_id'
     ];
 
     // public function company()

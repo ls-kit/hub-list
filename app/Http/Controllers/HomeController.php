@@ -32,23 +32,65 @@ class HomeController extends Controller
 
     }
 
+    /**
+     * Show listing page
+     *
+     * @return Inertia\Inertia\Response
+     */
     public function show()
     {
         return Inertia::render('Listing');
     }
 
+    /**
+     * Show add listing page
+     *
+     * @return Inertia\Inertia\Response
+     */
     public function addListing()
     {
         return Inertia::render('AddListing');
     }
 
+    /**
+     * Store job listing
+     *
+     * @param StoreJobListing $request
+     * @return Response
+     */
     public function storeListing(StoreJobListing $request)
     {
-        $job = Job::create($request->validated());
+        $validatedData = $request->validated();
+        $validatedData['user_id'] = auth()->id();
+        Job::create($validatedData);
 
         return response()->json([
             'message' => 'Job listing successfully created',
         ]);
+    }
+
+    /**
+     * Get job listing
+     *
+     * @param $userid
+     * @return void
+     */
+
+    public function getListing($userid)
+    {
+        $jobs = Job::all();
+
+        return response($jobs);
+    }
+
+    /**
+     * Show profile page
+     *
+     * @return Inertia\Inertia\Response
+     */
+    public function dashboard()
+    {
+        return Inertia::render('Dashboard');
     }
 
     public function search(Request $request)

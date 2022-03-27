@@ -74,7 +74,7 @@
                                                     <img src="img/author-avatar.png" alt="" class="rounded-circle">
                                                 </div>
                                                 <ul class="list-unstyled">
-                                                    <li><a href="javascript:void(0);">My Profile</a></li>
+                                                    <li><Link href="/dashboard">My Profile</Link></li>
                                                     <li><a href="javascript:void(0);">My Listing</a></li>
                                                     <li><a href="javascript:void(0);">Add Listing</a></li>
                                                     <li><a href="javascript:void(0);" @click="logoutUser">Logout</a></li>
@@ -134,6 +134,8 @@ export default {
                 .then((response) => {
                     this.$page.props.authCheck = false;
                     this.$toast.success(response.data.message);
+                    /* redirect to path*/
+                    this.$inertia.get(`/`);
                 })
                 .catch((error) => {
                     this.$toast.error(error.response.data.message);
