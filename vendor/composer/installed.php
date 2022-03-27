@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '3b0500129dd94b132d7d46159e450a755d0193e0',
+    'reference' => 'd316d3bb8f5324439a9082f39313c68a047ca0e5',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -508,7 +508,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '3b0500129dd94b132d7d46159e450a755d0193e0',
+      'reference' => 'd316d3bb8f5324439a9082f39313c68a047ca0e5',
     ),
     'laravel/passport' => 
     array (
@@ -1549,12 +1549,12 @@
     ),
     'tightenco/ziggy' => 
     array (
-      'pretty_version' => 'v1.4.4',
-      'version' => '1.4.4.0',
+      'pretty_version' => 'v1.4.5',
+      'version' => '1.4.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'ad1b6590978efe3ec36ca404e91f8acaa6c742bd',
+      'reference' => 'd3c74474f624ab80b7fb4e3e264e62bb4043eee2',
     ),
     'tijsverkoyen/css-to-inline-styles' => 
     array (

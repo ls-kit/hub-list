@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="{{ asset("frontend/vendor_assets/css/slick.css") }}">
     <link rel="stylesheet" href="{{ asset("frontend/style.css")}}">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
+    @routes
     <script src="{{ mix('/js/app.js') }}" defer></script>
     @inertiaHead
   </head>
   <body>
 
-    @inertia
+      @inertia
 
-    @routes
      <!-- inject:js-->
      <script src="{{asset("frontend/vendor_assets/js/jquery/jquery-1.12.3.js")}}"></script>
      <script src="{{asset("frontend/vendor_assets/js/bootstrap/popper.js")}}"></script>

@@ -6,11 +6,14 @@ import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
 import { InertiaProgress } from '@inertiajs/progress'
 
+
+
 createInertiaApp({
   resolve: name => require(`./Pages/${name}`),
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
+      .mixin({ methods: { route } })
       .use(VueToast)
       .mount(el)
   },
