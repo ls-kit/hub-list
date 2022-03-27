@@ -53,6 +53,16 @@ class HomeController extends Controller
     }
 
     /**
+     * Show Listing page
+     *
+     * @param $listingId
+     */
+    public function showListing($listingId)
+    {
+        return Inertia::render('ShowListing');
+    }
+
+    /**
      * Store job listing
      *
      * @param StoreJobListing $request

@@ -1,7 +1,9 @@
 <template lang="">
     <div class="tab-pane fade show active" id="listings" role="tabpanel" aria-labelledby="all-listings">
         <div class="container">
+
             <Loader v-if="loading"></Loader>
+
             <div class="row">
                 <div class="col-lg-4 col-sm-6" v-for="listing in listings">
                     <div class="atbd_single_listing atbd_listing_card">
@@ -20,7 +22,7 @@
                                 <div class="atbd_content_upper">
                                     <div class="atbd_dashboard_tittle_metas">
                                         <h4 class="atbd_listing_title">
-                                            <a href="">{{ listing.title }}</a>
+                                            <Link :="route('showlisting')">{{ listing.title }}</Link>
                                         </h4>
                                     </div><!-- ends: .atbd_dashboard_tittle_metas -->
                                     <div class="atbd_card_action">
@@ -57,10 +59,12 @@
 </template>
 <script>
 import Loader from '../Components/Loader.vue'
+import { Link } from '@inertiajs/inertia-vue3'
 export default {
     props: ['listings', 'loading'],
     components: {
-        Loader
+        Loader,
+        Link
     }
 }
 </script>
