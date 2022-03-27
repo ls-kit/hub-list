@@ -6,12 +6,12 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>Best Listings Around the World</h2>
-                        <p>Explore the popular listings around the world</p>
+                        <p>Explore the popular Job listings around the world</p>
                     </div>
                 </div>
                 <div class="listing-cards-wrapper col-lg-12">
                     <div class="row">
-                        <div class="col-lg-4 col-sm-6">
+                        <div class="col-lg-4 col-sm-6" v-for="listing in listings">
                             <div class="atbd_single_listing ">
                                 <article class="atbd_single_listing_wrapper">
                                     <figure class="atbd_listing_thumbnail_area">
@@ -35,7 +35,7 @@
                                     <div class="atbd_listing_info">
                                         <div class="atbd_content_upper">
                                             <h4 class="atbd_listing_title">
-                                                <a href="">Flanders Heat &amp; Air Systems</a>
+                                                <Link :href="route('showlisting', listing.id)">{{ listing.title }}</Link>
                                             </h4>
                                             <div class="atbd_listing_meta">
                                                 <span class="atbd_meta atbd_listing_rating">4.5<i class="la la-star"></i></span>
@@ -88,6 +88,7 @@
 
 import { Link } from '@inertiajs/inertia-vue3'
 export default {
+    props: ['listings'],
     components: {
         Link
     }

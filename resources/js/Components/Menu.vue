@@ -9,7 +9,7 @@
                                 <div class="menu-fullwidth">
                                     <div class="logo-wrapper order-lg-0 order-sm-1">
                                         <div class="logo logo-top">
-                                            <Link href="/"><img src="frontend/img/logo-white.png" alt="logo image" class="img-fluid"></Link>
+                                            <Link href="/"><img src="/frontend/img/logo-white.png" alt="logo image" class="img-fluid"></Link>
                                         </div>
                                     </div><!-- ends: .logo-wrapper -->
                                     <div class="menu-container order-lg-1 order-sm-0">

@@ -2,7 +2,7 @@
     <div>
         <HeroSection></HeroSection>
         <CategoryGridSection></CategoryGridSection>
-        <ListingSection></ListingSection>
+        <ListingSection :listings="listings"></ListingSection>
         <FooterSection></FooterSection>
     </div>
 </template>
@@ -14,13 +14,14 @@ import ListingSection from '../Sections/ListingSection.vue'
 import FooterSection from '../Sections/FooterSection.vue'
 
 export default {
+    props: ['listings'],
     components: {
         HeroSection,
         CategoryGridSection,
         ListingSection,
         FooterSection,
-
     },
+
 
 
 }

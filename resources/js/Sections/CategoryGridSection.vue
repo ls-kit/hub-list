@@ -29,6 +29,101 @@
                         </figure>
                     </div><!-- ends: .category-single -->
                 </div><!-- ends: .col -->
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="category-single category--img">
+                        <figure class="category--img4">
+                            <img src="/frontend/img/cat1.jpg" alt="">
+                            <figcaption class="overlay-bg">
+                                <a href="" class="cat-box">
+                                    <div>
+                                        <div class="icon">
+                                            <span class="la la-cutlery"></span>
+                                        </div>
+                                        <h4 class="cat-name">Restaurants</h4>
+                                        <span class="badge badge-pill badge-success">48 Listings</span>
+                                    </div>
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div><!-- ends: .category-single -->
+                </div><!-- ends: .col -->
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="category-single category--img">
+                        <figure class="category--img4">
+                            <img src="/frontend/img/cat1.jpg" alt="">
+                            <figcaption class="overlay-bg">
+                                <a href="" class="cat-box">
+                                    <div>
+                                        <div class="icon">
+                                            <span class="la la-cutlery"></span>
+                                        </div>
+                                        <h4 class="cat-name">Restaurants</h4>
+                                        <span class="badge badge-pill badge-success">48 Listings</span>
+                                    </div>
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div><!-- ends: .category-single -->
+                </div><!-- ends: .col -->
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="category-single category--img">
+                        <figure class="category--img4">
+                            <img src="/frontend/img/cat1.jpg" alt="">
+                            <figcaption class="overlay-bg">
+                                <a href="" class="cat-box">
+                                    <div>
+                                        <div class="icon">
+                                            <span class="la la-cutlery"></span>
+                                        </div>
+                                        <h4 class="cat-name">Restaurants</h4>
+                                        <span class="badge badge-pill badge-success">48 Listings</span>
+                                    </div>
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div><!-- ends: .category-single -->
+                </div><!-- ends: .col -->
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="category-single category--img">
+                        <figure class="category--img4">
+                            <img src="/frontend/img/cat1.jpg" alt="">
+                            <figcaption class="overlay-bg">
+                                <a href="" class="cat-box">
+                                    <div>
+                                        <div class="icon">
+                                            <span class="la la-cutlery"></span>
+                                        </div>
+                                        <h4 class="cat-name">Restaurants</h4>
+                                        <span class="badge badge-pill badge-success">48 Listings</span>
+                                    </div>
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div><!-- ends: .category-single -->
+                </div><!-- ends: .col -->
+
+                <div class="col-lg-4 col-sm-6">
+                    <div class="category-single category--img">
+                        <figure class="category--img4">
+                            <img src="/frontend/img/cat1.jpg" alt="">
+                            <figcaption class="overlay-bg">
+                                <a href="" class="cat-box">
+                                    <div>
+                                        <div class="icon">
+                                            <span class="la la-cutlery"></span>
+                                        </div>
+                                        <h4 class="cat-name">Restaurants</h4>
+                                        <span class="badge badge-pill badge-success">48 Listings</span>
+                                    </div>
+                                </a>
+                            </figcaption>
+                        </figure>
+                    </div><!-- ends: .category-single -->
+                </div><!-- ends: .col -->
             </div>
         </div>
     </section><!-- ends: .categories-cards -->
