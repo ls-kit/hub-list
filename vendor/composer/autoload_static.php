@@ -167,6 +167,7 @@ class ComposerStaticInit24cafb8054bfbca5d7e1aabf09b21727
         'H' => 
         array (
             'Http\\Message\\' => 13,
+            'Harimayco\\Menu\\' => 15,
         ),
         'G' => 
         array (
@@ -543,6 +544,10 @@ class ComposerStaticInit24cafb8054bfbca5d7e1aabf09b21727
         'Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/message-factory/src',
+        ),
+        'Harimayco\\Menu\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/harimayco/laravel-menu/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -2240,6 +2245,12 @@ class ComposerStaticInit24cafb8054bfbca5d7e1aabf09b21727
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'Harimayco\\Menu\\Controllers\\MenuController' => __DIR__ . '/..' . '/harimayco/laravel-menu/src/Controllers/MenuController.php',
+        'Harimayco\\Menu\\Facades\\Menu' => __DIR__ . '/..' . '/harimayco/laravel-menu/src/Facades/Menu.php',
+        'Harimayco\\Menu\\MenuServiceProvider' => __DIR__ . '/..' . '/harimayco/laravel-menu/src/MenuServiceProvider.php',
+        'Harimayco\\Menu\\Models\\MenuItems' => __DIR__ . '/..' . '/harimayco/laravel-menu/src/Models/MenuItems.php',
+        'Harimayco\\Menu\\Models\\Menus' => __DIR__ . '/..' . '/harimayco/laravel-menu/src/Models/Menus.php',
+        'Harimayco\\Menu\\WMenu' => __DIR__ . '/..' . '/harimayco/laravel-menu/src/WMenu.php',
         'Http\\Message\\MessageFactory' => __DIR__ . '/..' . '/php-http/message-factory/src/MessageFactory.php',
         'Http\\Message\\RequestFactory' => __DIR__ . '/..' . '/php-http/message-factory/src/RequestFactory.php',
         'Http\\Message\\ResponseFactory' => __DIR__ . '/..' . '/php-http/message-factory/src/ResponseFactory.php',

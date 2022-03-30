@@ -92,6 +92,18 @@
                     </a>
                 </li>
             @endcan
+
+            @can('job_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.menu-builder.index") }}" class="nav-link {{ request()->is('admin/menu-builder') || request()->is('admin/menu-builder/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-list nav-icon">
+
+                        </i>
+                        Menu builder
+                    </a>
+                </li>
+            @endcan
+
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">

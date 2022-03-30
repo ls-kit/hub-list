@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'd316d3bb8f5324439a9082f39313c68a047ca0e5',
+    'reference' => '526553da1fae53d66399533cc4634c01ab296cba',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -273,6 +273,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '8c3d0a3f6af734494ad8f6fbbee0ba92422859f3',
+    ),
+    'harimayco/laravel-menu' => 
+    array (
+      'pretty_version' => '1.4.5',
+      'version' => '1.4.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '060bd4be8d90cd9f47b1b46e2cbdc7194e6b8e9e',
     ),
     'illuminate/auth' => 
     array (
@@ -532,7 +541,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'd316d3bb8f5324439a9082f39313c68a047ca0e5',
+      'reference' => '526553da1fae53d66399533cc4634c01ab296cba',
     ),
     'laravel/passport' => 
     array (
