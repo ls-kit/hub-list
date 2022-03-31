@@ -2,8 +2,11 @@
 
 namespace App\Http\Middleware;
 
+use Harimayco\Menu\Facades\Menu;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use Harimayco\Menu\Models\Menus;
+use Harimayco\Menu\Models\MenuItems;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -40,6 +43,8 @@ class HandleInertiaRequests extends Middleware
 
             'authCheck' => auth()->check(),
             'auth.user' => auth()->user(),
+            'menu.header_menu' => Menu::getByName('header_menu'),
+            'menu.footer_menu' => Menu::getByName('footer_menu'),
         ]);
     }
 }

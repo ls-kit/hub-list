@@ -21,8 +21,8 @@
                                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                                 <div class="collapse navbar-collapse" id="direo-navbar-collapse">
                                                     <ul class="navbar-nav">
-                                                        <li>
-                                                            <Link href="/">Home</Link>
+                                                        <li v-for="menu in menus.header_menu">
+                                                            <Link href="{{ menu.link }}">{{menu.label}}</Link>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -119,7 +119,8 @@ export default {
     },
     data() {
         return {
-            toggle: false
+            toggle: false,
+            menus: this.$page.props.menu,
         }
     },
 
