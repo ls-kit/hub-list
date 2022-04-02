@@ -22,7 +22,7 @@
                                                 <div class="collapse navbar-collapse" id="direo-navbar-collapse">
                                                     <ul class="navbar-nav">
                                                         <li v-for="menu in menus.header_menu">
-                                                            <Link href="{{ menu.link }}">{{menu.label}}</Link>
+                                                            <Link :href="menu.link">{{menu.label}}</Link>
                                                         </li>
                                                     </ul>
                                                 </div>

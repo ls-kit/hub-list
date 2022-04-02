@@ -1,3 +1,4 @@
+@props(['value', 'errors', 'name', 'label', 'type'])
 <div>
     <div class="form-group {{ $errors->has($name) ? 'has-error' : '' }}">
         <label for="{{$name}}">{{ $label }}</label>
@@ -11,9 +12,7 @@
                 {{ $errors->first($name) }}
             </em>
         @endif
-        <p class="helper-block">
-            {{ trans('cruds.job.fields.'.$name.'_helper') }}
-        </p>
+
     </div>
 </div>
 

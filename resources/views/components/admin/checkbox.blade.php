@@ -1,3 +1,4 @@
+@props(['value', 'errors', 'name', 'label', 'type'])
 <div>
     <div class="form-group {{ $errors->has($name) ? 'has-error' : '' }}">
         <label for="$name">{{ $label }}</label>

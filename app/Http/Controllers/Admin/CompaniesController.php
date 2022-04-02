@@ -21,7 +21,6 @@ class CompaniesController extends Controller
         abort_if(Gate::denies('company_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $companies = Company::all();
-
         return view('admin.companies.index', compact('companies'));
     }
 

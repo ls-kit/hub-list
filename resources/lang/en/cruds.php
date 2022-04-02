@@ -157,4 +157,17 @@ return [
             'company_name_helper'      => '',
         ],
     ],
+    'service' => [
+        'title' => 'Services',
+        'title_singluer' => 'Service',
+        'fields' => [
+            'id' => 'Id',
+            'name' => 'Name',
+            'aria' => 'Aria',
+            'map' => 'Map',
+            'type' => 'Type',
+            'phone' => 'Phone',
+            'service_provider' => 'Provider Name'
+        ]
+    ]
 ];

@@ -93,15 +93,26 @@
                 </li>
             @endcan
 
-            @can('job_access')
+            @can('menu_builder_access')
                 <li class="nav-item">
-                    <a href="{{ route("admin.menu-builder.index") }}" class="nav-link {{ request()->is('admin/menu-builder') || request()->is('admin/menu-builder/*') ? 'active' : '' }}">
+                    <a href="{{ route("admin.service.index") }}" class="nav-link {{ request()->is('admin/menu-builder') || request()->is('admin/menu-builder/*') ? 'active' : '' }}">
                         <i class="fa-fw fas fa-list nav-icon">
 
                         </i>
-                        Menu builder
+                        Services
                     </a>
                 </li>
+            @endcan
+
+            @can('menu_builder_access')
+            <li class="nav-item">
+                <a href="{{ route("admin.menu-builder.index") }}" class="nav-link {{ request()->is('admin/menu-builder') || request()->is('admin/menu-builder/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-list nav-icon">
+
+                    </i>
+                    Menu builder
+                </a>
+            </li>
             @endcan
 
             <li class="nav-item">

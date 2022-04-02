@@ -22023,7 +22023,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ends: .logo-wrapper "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Collect the nav links, forms, and other content for toggling "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_16, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.menus.header_menu, function (menu) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-      href: "{{ menu.link }}"
+      href: menu.link
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(menu.label), 1
@@ -22033,9 +22033,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       _: 2
       /* DYNAMIC */
 
-    }, 1024
-    /* DYNAMIC_SLOTS */
-    )]);
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["href"])]);
   }), 256
   /* UNKEYED_FRAGMENT */
   ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" /.navbar-collapse ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ends: .search-wrapper "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" start .author-area "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_21, [_ctx.$page.props.authCheck ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
@@ -60587,7 +60587,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Loader_vue_vue_type_template_id_0ddc26c4_scoped_true_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Loader.vue?vue&type=template&id=0ddc26c4&scoped=true&lang=true */ "./resources/js/Components/Loader.vue?vue&type=template&id=0ddc26c4&scoped=true&lang=true");
 /* harmony import */ var _Loader_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Loader.vue?vue&type=script&lang=js */ "./resources/js/Components/Loader.vue?vue&type=script&lang=js");
 /* harmony import */ var _Loader_vue_vue_type_style_index_0_id_0ddc26c4_lang_css_scoped_true__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Loader.vue?vue&type=style&index=0&id=0ddc26c4&lang=css&scoped=true */ "./resources/js/Components/Loader.vue?vue&type=style&index=0&id=0ddc26c4&lang=css&scoped=true");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -60595,7 +60595,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Loader_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Loader_vue_vue_type_template_id_0ddc26c4_scoped_true_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-0ddc26c4"],['__file',"resources/js/Components/Loader.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Loader_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Loader_vue_vue_type_template_id_0ddc26c4_scoped_true_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-0ddc26c4"],['__file',"resources/js/Components/Loader.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60617,13 +60617,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _LoginModal_vue_vue_type_template_id_56d54162_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LoginModal.vue?vue&type=template&id=56d54162&lang=true */ "./resources/js/Components/LoginModal.vue?vue&type=template&id=56d54162&lang=true");
 /* harmony import */ var _LoginModal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoginModal.vue?vue&type=script&lang=js */ "./resources/js/Components/LoginModal.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_LoginModal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_LoginModal_vue_vue_type_template_id_56d54162_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Components/LoginModal.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_LoginModal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_LoginModal_vue_vue_type_template_id_56d54162_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Components/LoginModal.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60645,13 +60645,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Menu_vue_vue_type_template_id_6b52e6ac_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu.vue?vue&type=template&id=6b52e6ac&lang=true */ "./resources/js/Components/Menu.vue?vue&type=template&id=6b52e6ac&lang=true");
 /* harmony import */ var _Menu_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Menu.vue?vue&type=script&lang=js */ "./resources/js/Components/Menu.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Menu_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Menu_vue_vue_type_template_id_6b52e6ac_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Components/Menu.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Menu_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Menu_vue_vue_type_template_id_6b52e6ac_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Components/Menu.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60673,13 +60673,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _RegisterModal_vue_vue_type_template_id_a5ea76e2_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RegisterModal.vue?vue&type=template&id=a5ea76e2&lang=true */ "./resources/js/Components/RegisterModal.vue?vue&type=template&id=a5ea76e2&lang=true");
 /* harmony import */ var _RegisterModal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RegisterModal.vue?vue&type=script&lang=js */ "./resources/js/Components/RegisterModal.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RegisterModal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RegisterModal_vue_vue_type_template_id_a5ea76e2_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Components/RegisterModal.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_RegisterModal_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_RegisterModal_vue_vue_type_template_id_a5ea76e2_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Components/RegisterModal.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60701,13 +60701,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _AddListing_vue_vue_type_template_id_7c410f8c_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddListing.vue?vue&type=template&id=7c410f8c&lang=true */ "./resources/js/Pages/AddListing.vue?vue&type=template&id=7c410f8c&lang=true");
 /* harmony import */ var _AddListing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddListing.vue?vue&type=script&lang=js */ "./resources/js/Pages/AddListing.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AddListing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AddListing_vue_vue_type_template_id_7c410f8c_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/AddListing.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AddListing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AddListing_vue_vue_type_template_id_7c410f8c_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/AddListing.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60729,13 +60729,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Dashboard_vue_vue_type_template_id_097ba13b_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=template&id=097ba13b&lang=true */ "./resources/js/Pages/Dashboard.vue?vue&type=template&id=097ba13b&lang=true");
 /* harmony import */ var _Dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=script&lang=js */ "./resources/js/Pages/Dashboard.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Dashboard_vue_vue_type_template_id_097ba13b_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Dashboard.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Dashboard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Dashboard_vue_vue_type_template_id_097ba13b_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Dashboard.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60757,13 +60757,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Home_vue_vue_type_template_id_6a63e488_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=6a63e488&lang=true */ "./resources/js/Pages/Home.vue?vue&type=template&id=6a63e488&lang=true");
 /* harmony import */ var _Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js */ "./resources/js/Pages/Home.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Home_vue_vue_type_template_id_6a63e488_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Home.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Home_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Home_vue_vue_type_template_id_6a63e488_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Home.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60785,13 +60785,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Listing_vue_vue_type_template_id_0ad230eb_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Listing.vue?vue&type=template&id=0ad230eb&lang=true */ "./resources/js/Pages/Listing.vue?vue&type=template&id=0ad230eb&lang=true");
 /* harmony import */ var _Listing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Listing.vue?vue&type=script&lang=js */ "./resources/js/Pages/Listing.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Listing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Listing_vue_vue_type_template_id_0ad230eb_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Listing.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Listing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Listing_vue_vue_type_template_id_0ad230eb_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Listing.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60813,13 +60813,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ShowListing_vue_vue_type_template_id_2156a3a4_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ShowListing.vue?vue&type=template&id=2156a3a4&lang=true */ "./resources/js/Pages/ShowListing.vue?vue&type=template&id=2156a3a4&lang=true");
 /* harmony import */ var _ShowListing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ShowListing.vue?vue&type=script&lang=js */ "./resources/js/Pages/ShowListing.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ShowListing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ShowListing_vue_vue_type_template_id_2156a3a4_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/ShowListing.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ShowListing_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ShowListing_vue_vue_type_template_id_2156a3a4_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/ShowListing.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60841,13 +60841,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _CategoryGridSection_vue_vue_type_template_id_392aa204_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoryGridSection.vue?vue&type=template&id=392aa204&lang=true */ "./resources/js/Sections/CategoryGridSection.vue?vue&type=template&id=392aa204&lang=true");
 /* harmony import */ var _CategoryGridSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoryGridSection.vue?vue&type=script&lang=js */ "./resources/js/Sections/CategoryGridSection.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_CategoryGridSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_CategoryGridSection_vue_vue_type_template_id_392aa204_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/CategoryGridSection.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_CategoryGridSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_CategoryGridSection_vue_vue_type_template_id_392aa204_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/CategoryGridSection.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60869,13 +60869,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _FooterSection_vue_vue_type_template_id_57af93b2_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FooterSection.vue?vue&type=template&id=57af93b2&lang=true */ "./resources/js/Sections/FooterSection.vue?vue&type=template&id=57af93b2&lang=true");
 /* harmony import */ var _FooterSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FooterSection.vue?vue&type=script&lang=js */ "./resources/js/Sections/FooterSection.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_FooterSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_FooterSection_vue_vue_type_template_id_57af93b2_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/FooterSection.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_FooterSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_FooterSection_vue_vue_type_template_id_57af93b2_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/FooterSection.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60897,13 +60897,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _HeroSection_vue_vue_type_template_id_0f8f30b0_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeroSection.vue?vue&type=template&id=0f8f30b0&lang=true */ "./resources/js/Sections/HeroSection.vue?vue&type=template&id=0f8f30b0&lang=true");
 /* harmony import */ var _HeroSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HeroSection.vue?vue&type=script&lang=js */ "./resources/js/Sections/HeroSection.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_HeroSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_HeroSection_vue_vue_type_template_id_0f8f30b0_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/HeroSection.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_HeroSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_HeroSection_vue_vue_type_template_id_0f8f30b0_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/HeroSection.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60925,13 +60925,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ListingSection_vue_vue_type_template_id_2c3696b4_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListingSection.vue?vue&type=template&id=2c3696b4&lang=true */ "./resources/js/Sections/ListingSection.vue?vue&type=template&id=2c3696b4&lang=true");
 /* harmony import */ var _ListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListingSection.vue?vue&type=script&lang=js */ "./resources/js/Sections/ListingSection.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ListingSection_vue_vue_type_template_id_2c3696b4_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/ListingSection.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ListingSection_vue_vue_type_template_id_2c3696b4_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/ListingSection.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60953,13 +60953,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _MyListingSection_vue_vue_type_template_id_e6f9fa80_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MyListingSection.vue?vue&type=template&id=e6f9fa80&lang=true */ "./resources/js/Sections/MyListingSection.vue?vue&type=template&id=e6f9fa80&lang=true");
 /* harmony import */ var _MyListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyListingSection.vue?vue&type=script&lang=js */ "./resources/js/Sections/MyListingSection.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_MyListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_MyListingSection_vue_vue_type_template_id_e6f9fa80_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/MyListingSection.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_MyListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_MyListingSection_vue_vue_type_template_id_e6f9fa80_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/MyListingSection.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -60981,13 +60981,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ProfileSection_vue_vue_type_template_id_90736322_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProfileSection.vue?vue&type=template&id=90736322&lang=true */ "./resources/js/Sections/ProfileSection.vue?vue&type=template&id=90736322&lang=true");
 /* harmony import */ var _ProfileSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProfileSection.vue?vue&type=script&lang=js */ "./resources/js/Sections/ProfileSection.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_Laravel_Job_Listings_QuickAdminPanel_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ProfileSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ProfileSection_vue_vue_type_template_id_90736322_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/ProfileSection.vue"]])
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ProfileSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ProfileSection_vue_vue_type_template_id_90736322_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/ProfileSection.vue"]])
 /* hot reload */
 if (false) {}
 

@@ -67,4 +67,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     // Menu builder
     Route::get('/menu-builder', 'MenuBuilderController')->name('menu-builder.index');
+
+    // Service
+    Route::delete('service/destroy', 'ServiceController@massDestroy')->name('service.massDestroy');
+    Route::post('service/media', 'ServiceController@storeMedia')->name('service.storeMedia');
+    Route::resource('/service', 'ServiceController');
+
 });

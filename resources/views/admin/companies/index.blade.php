@@ -36,6 +36,7 @@
                         </th>
                     </tr>
                 </thead>
+
                 <tbody>
                     @foreach($companies as $key => $company)
                         <tr data-entry-id="{{ $company->id }}">
