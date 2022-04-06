@@ -88,19 +88,19 @@
                                 {{ $service->provider_name ?? '' }}
                             </td>
                             <td>
-                                @can('job_show')
+                                {{-- @can('job_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.service.show', $service->id) }}">
                                         {{ trans('global.view') }}
                                     </a>
-                                @endcan
+                                @endcan --}}
 
-                                @can('job_edit')
+                                @can('service_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.service.edit', $service->id) }}">
                                         {{ trans('global.edit') }}
                                     </a>
                                 @endcan
 
-                                @can('job_delete')
+                                @can('service_delete')
                                     <form action="{{ route('admin.service.destroy', $service->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

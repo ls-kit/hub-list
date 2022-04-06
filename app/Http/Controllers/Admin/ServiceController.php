@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Company;
+
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyServiceRequest;
 use App\Http\Requests\ServiceStroeRequest;
 use App\Http\Requests\ServiceUpdateRequest;
 use App\Service;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use League\Glide\Server;
+use Gate;
 use Symfony\Component\HttpFoundation\Response;
 
 class ServiceController extends Controller
@@ -25,7 +23,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        // abort_if(Gate::denies('company_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('service_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $services = Service::all();
         // return $services;
@@ -39,6 +37,8 @@ class ServiceController extends Controller
      */
     public function create()
     {
+        abort_if(Gate::denies('service_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         return view('admin.service.create');
     }
 
@@ -66,7 +66,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        // $service = Service::findOrFail($id);
+        abort_if(Gate::denies('service_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return view('admin.service.show', compact('service'));
     }
@@ -79,7 +79,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        // $service = Service::findOrFail($id);
+        abort_if(Gate::denies('service_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return view('admin.service.edit', compact('service'));
     }
@@ -115,12 +115,15 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
+        abort_if(Gate::denies('service_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+
         $service->delete();
         return redirect()->back();
     }
 
     public function massDestroy(MassDestroyServiceRequest $request)
     {
+        
         Service::whereIn('id', request('ids'))->delete();
 
         return response(null, Response::HTTP_NO_CONTENT);

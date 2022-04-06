@@ -93,12 +93,10 @@
                 </li>
             @endcan
 
-            @can('menu_builder_access')
+            @can('service_access')
                 <li class="nav-item">
                     <a href="{{ route("admin.service.index") }}" class="nav-link {{ request()->is('admin/menu-builder') || request()->is('admin/menu-builder/*') ? 'active' : '' }}">
-                        <i class="fa-fw fas fa-list nav-icon">
-
-                        </i>
+                        <i class="fa-fw fas fa-list nav-icon"></i>
                         Services
                     </a>
                 </li>
