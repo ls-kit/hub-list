@@ -7,6 +7,7 @@ use App\Http\Requests\StoreJobListing;
 use App\Http\Requests\StoreJobRequest;
 use App\Location;
 use App\Job;
+use App\Service;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -60,9 +61,20 @@ class HomeController extends Controller
      *
      * @param $listingId
      */
-    public function showListing($listingId)
+    public function showListing( $listingType, $listingId )
     {
-        $listing = Job::findOrFail($listingId);
+        switch ($listingType) {
+            case 'job':
+                $listing = Job::findOrFail($listingId);
+                break;
+            case 'service':
+                $listing = Service::findOrFail($listingId);
+                break;
+            default:
+                abort(404);
+                break;
+        }
+
         return Inertia::render('ShowListing', ['listing' => $listing]);
     }
 

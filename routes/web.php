@@ -12,7 +12,9 @@ Route::get('/show', 'HomeController@show')->name('show');
 Route::get('/add-listing', 'HomeController@addListing')->name('addlisting')->middleware('auth');
 Route::post('/store-listing', 'HomeController@storeListing')->name('storelisting')->middleware('auth');
 Route::get('/get-listing/{userid}', 'HomeController@getListing')->name('getlisting')->middleware('auth');
-Route::get('/show-listing/{listingid}', 'HomeController@showListing')->name('showlisting')->middleware('auth');
+
+/** Show listing routes */
+Route::get('/show-listing/{listingType}/{listingid}', 'HomeController@showListing')->name('showlisting')->middleware('auth');
 
 /** Profile routes */
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard')->middleware('auth');

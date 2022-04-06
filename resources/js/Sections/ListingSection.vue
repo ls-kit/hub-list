@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Best Listings Around the World</h2>
+                        <h2>Best Job Listings Around the World</h2>
                         <p>Explore the popular Job listings around the world</p>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                                     <div class="atbd_listing_info">
                                         <div class="atbd_content_upper">
                                             <h4 class="atbd_listing_title">
-                                                <Link :href="route('showlisting', listing.id)">{{ listing.title }}</Link>
+                                                <Link :href="route('showlisting',['job', listing.id])">{{ listing.title }}</Link>
                                             </h4>
                                             <div class="atbd_listing_meta">
                                                 <span class="atbd_meta atbd_listing_rating">4.5<i class="la la-star"></i></span>

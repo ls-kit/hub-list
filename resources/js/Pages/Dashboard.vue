@@ -45,8 +45,10 @@
             </div>
         </div><!-- ends: .dashboard-nav -->
         <div class="tab-content p-top-100" id="dashboard-tabs-content">
-
+        
+        <!-- starts: listing section -->
         <MyListingSection :listings="listings" :loading="isLoading"></MyListingSection>
+        <!-- ends: listing section -->
 
         <ProfileSection></ProfileSection>
 

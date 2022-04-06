@@ -22,7 +22,7 @@
                                 <div class="atbd_content_upper">
                                     <div class="atbd_dashboard_tittle_metas">
                                         <h4 class="atbd_listing_title">
-                                            <Link :href="route('showlisting', listing.id)">{{ listing.title }}</Link>
+                                            <Link :href="route('showlisting', ['job', listing.id])">{{ listing.title }}</Link>
                                         </h4>
                                     </div><!-- ends: .atbd_dashboard_tittle_metas -->
                                     <div class="atbd_card_action">
