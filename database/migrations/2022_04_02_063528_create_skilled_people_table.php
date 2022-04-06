@@ -15,6 +15,12 @@ class CreateSkilledPeopleTable extends Migration
     {
         Schema::create('skilled_people', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('skilled_in');
+            $table->text('description');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('email');
             $table->timestamps();
         });
     }

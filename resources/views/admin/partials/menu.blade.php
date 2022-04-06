@@ -102,6 +102,15 @@
                 </li>
             @endcan
 
+            @can('service_access')
+            <li class="nav-item">
+                <a href="{{ route("admin.person.index") }}" class="nav-link {{ request()->is('admin/menu-builder') || request()->is('admin/menu-builder/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-list nav-icon"></i>
+                    Skilled Person
+                </a>
+            </li>
+            @endcan
+
             @can('menu_builder_access')
             <li class="nav-item">
                 <a href="{{ route("admin.menu-builder.index") }}" class="nav-link {{ request()->is('admin/menu-builder') || request()->is('admin/menu-builder/*') ? 'active' : '' }}">

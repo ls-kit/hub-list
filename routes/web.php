@@ -75,4 +75,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('service/media', 'ServiceController@storeMedia')->name('service.storeMedia');
     Route::resource('/service', 'ServiceController');
 
+    // Service
+    Route::delete('person/destroy', 'SkilledPersonController@massDestroy')->name('person.massDestroy');
+    Route::post('person/media', 'SkilledPersonController@storeMedia')->name('person.storeMedia');
+    Route::resource('/person', 'SkilledPersonController');
+
 });
