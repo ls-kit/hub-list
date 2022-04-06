@@ -25,6 +25,7 @@ class Service extends Model implements HasMedia
         'type',
         'phone',
         'provider_name',
+        'description',
     ];
 
     public function registerMediaConversions(Media $media = null): void

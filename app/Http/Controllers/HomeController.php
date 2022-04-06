@@ -16,8 +16,10 @@ class HomeController extends Controller
     public function index()
     {
         $listing = Job::latest()->take(9)->get();
+        $services = Service::latest()->take(6)->get();
         return Inertia::render('Home', [
-            'listings' => $listing
+            'listings' => $listing,
+            'services' => $services,
         ]);
 
         // $searchLocations = Location::pluck('name', 'id');
@@ -66,16 +68,17 @@ class HomeController extends Controller
         switch ($listingType) {
             case 'job':
                 $listing = Job::findOrFail($listingId);
+                return Inertia::render('ShowListing', ['listing' => $listing]);
                 break;
             case 'service':
-                $listing = Service::findOrFail($listingId);
+                $service = Service::findOrFail($listingId);
+                return Inertia::render('ShowServiceListing', ['service' => $service]);
                 break;
             default:
                 abort(404);
                 break;
         }
 
-        return Inertia::render('ShowListing', ['listing' => $listing]);
     }
 
     /**

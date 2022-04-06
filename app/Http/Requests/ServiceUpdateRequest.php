@@ -32,7 +32,8 @@ class ServiceUpdateRequest extends FormRequest
             'area' => ['required'],
             'type' => ['required'],
             'phone' => ['required'],
-            'provider_name' => ['required']
+            'provider_name' => ['required'],
+            'description' => ['required'],
         ];
     }
 }

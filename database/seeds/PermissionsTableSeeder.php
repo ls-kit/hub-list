@@ -150,8 +150,36 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => '36',
-                'title' => 'job_access',
+                'title' => 'service_access',
             ],
+            [
+                'id'    => '37',
+                'title' => 'service_create',
+            ],
+            [
+                'id'    => '38',
+                'title' => 'service_edit',
+            ],
+            [
+                'id'    => '39',
+                'title' => 'service_show',
+            ],
+            [
+                'id'    => '40',
+                'title' => 'service_delete',
+            ],
+            [
+                'id'    => '41',
+                'title' => 'service_access',
+            ],
+            [
+                'id'    => '42',
+                'title' => 'menu_builder_access',
+            ],
+            [
+                'id'    => '43',
+                'title' => 'job_access',
+            ]
         ];
 
         Permission::insert($permissions);

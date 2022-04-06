@@ -38,20 +38,20 @@
                                                 <Link :href="route('showlisting',['job', listing.id])">{{ listing.title }}</Link>
                                             </h4>
                                             <div class="atbd_listing_meta">
-                                                <span class="atbd_meta atbd_listing_rating">4.5<i class="la la-star"></i></span>
-                                                <span class="atbd_meta atbd_listing_price">$55.00</span>
-                                                <span class="atbd_meta atbd_badge_open">Open Now</span>
+                                                <!-- <span class="atbd_meta atbd_listing_rating">4.5<i class="la la-star"></i></span> -->
+                                                <span class="atbd_meta atbd_listing_price">{{ listing.salary }}</span>
+                                                <!-- <span class="atbd_meta atbd_badge_open">Open Now</span> -->
                                             </div><!-- End atbd listing meta -->
                                             <div class="atbd_listing_data_list">
                                                 <ul>
                                                     <li>
-                                                        <p><span class="la la-map-marker"></span>Los Angeles, United States</p>
+                                                        <p><span class="la la-map-marker"></span>{{ listing.address }}</p>
                                                     </li>
                                                     <li>
-                                                        <p><span class="la la-phone"></span>(415) 796-3633</p>
+                                                        <p><span class="la la-phone"></span>{{ listing.phone }}</p>
                                                     </li>
                                                     <li>
-                                                        <p><span class="la la-calendar-check-o"></span>Posted 2 months ago</p>
+                                                        <p><span class="la la-calendar-check-o"></span></p>
                                                     </li>
                                                 </ul>
                                             </div><!-- End atbd listing meta -->
@@ -75,7 +75,7 @@
                         </div><!-- ends: .col-lg-4 -->
 
                         <div class="col-lg-12 text-center m-top-20">
-                            <Link href="/show" class="btn btn-gradient btn-gradient-two">Explore All 200+</Link>
+                            <Link href="/show" class="btn btn-gradient btn-gradient-two">Explore All</Link>
                         </div>
                     </div>
                 </div><!-- ends: .listing-cards-wrapper -->

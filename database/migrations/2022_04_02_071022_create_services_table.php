@@ -19,6 +19,7 @@ class CreateServicesTable extends Migration
             $table->string('area');
             $table->text('map')->nullable();
             $table->string('type');
+            $table->text('description');
             $table->string('phone');
             $table->string('provider_name');
             $table->timestamps();

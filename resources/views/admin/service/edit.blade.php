@@ -30,6 +30,8 @@
                 </p>
             </div>
 
+            <x-admin.input type="text" label="Description" name="description" :errors="$errors" />
+
             <x-admin.input type="text" label="Service Area" name="area" :errors="$errors" :value="$service" />
 
             <x-admin.input type="text" label="Service Map" name="map" :errors="$errors" :value="$service" />

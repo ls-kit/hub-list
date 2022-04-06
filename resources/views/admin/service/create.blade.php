@@ -31,6 +31,8 @@
                 </p>
             </div>
 
+            <x-admin.textarea type="text" label="Description" name="description" :errors="$errors" />
+
             <x-admin.input type="text" label="Service Area" name="area" :errors="$errors" />
 
             <x-admin.input type="text" label="Service Map" name="map" :errors="$errors" />
@@ -56,8 +58,7 @@
 
 @section('scripts')
 <script>
-    CKEDITOR.replace( 'full_description' );
-    CKEDITOR.replace( 'requirements' );
+    CKEDITOR.replace( 'description' );
 </script>
 
 <script>
