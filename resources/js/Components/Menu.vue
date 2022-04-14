@@ -20,10 +20,23 @@
                                                 </button>
                                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                                 <div class="collapse navbar-collapse" id="direo-navbar-collapse">
-                                                    <ul class="navbar-nav">
-                                                        <li v-for="menu in menus.header_menu">
+                                                    <ul class="navbar-nav" v-for="menu in menus.header_menu">
+
+                                                        <li v-if="menu.child == 0" >
                                                             <Link :href="menu.link">{{menu.label}}</Link>
                                                         </li>
+
+                                                        <li class="dropdown has_dropdown" v-else>
+                                                            <a class="dropdown-toggle" href="#" :id="menu.id" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                {{menu.label}}
+                                                            </a>
+                                                            <ul class="dropdown-menu" :aria-labelledby="menu.id" >
+                                                                <li v-for="item in menu.child">
+                                                                    <Link :href="item.link">{{item.label}}</Link>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        
                                                     </ul>
                                                 </div>
                                                 <!-- /.navbar-collapse -->

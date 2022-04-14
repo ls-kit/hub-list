@@ -44,7 +44,9 @@ class HandleInertiaRequests extends Middleware
             'authCheck' => auth()->check(),
             'auth.user' => auth()->user(),
             'menu.header_menu' => Menu::getByName('header_menu'),
-            'menu.footer_menu' => Menu::getByName('footer_menu'),
+            'menu.footer_menu_1' => Menu::getByName('footer_menu_1'),
+            'menu.footer_menu_2' => Menu::getByName('footer_menu_2'),
+            'menu.footer_menu_3' => Menu::getByName('footer_menu_3'),
         ]);
     }
 }

@@ -8,12 +8,9 @@
                         <div class="widget widget_pages">
                             <h2 class="widget-title">Company Info</h2>
                             <ul class="list-unstyled">
-                                <li class="page-item"><a href="">About Us</a></li>
-                                <li class="page-item"><a href="">Conact Us</a></li>
-                                <li class="page-item"><a href="">Our Listings</a></li>
-                                <li class="page-item"><a href="">Our Pricings</a></li>
-                                <li class="page-item"><a href="">Support</a></li>
-                                <li class="page-item"><a href="">Privacy Policy</a></li>
+                                <li  v-for="menu in menus.footer_menu_1" class="page-item">
+                                    <Link :href="menu.link">{{menu.label}}</Link>
+                                </li>
                             </ul>
                         </div>
                     </div><!-- ends: .col-lg-3 -->
@@ -21,12 +18,9 @@
                         <div class="widget widget_pages">
                             <h2 class="widget-title">Helpful Links</h2>
                             <ul class="list-unstyled">
-                                <li class="page-item"><a href="">Join Direo</a></li>
-                                <li class="page-item"><a href="">Sign In</a></li>
-                                <li class="page-item"><a href="">How it Work</a></li>
-                                <li class="page-item"><a href="">Advantages</a></li>
-                                <li class="page-item"><a href="">Direo App</a></li>
-                                <li class="page-item"><a href="">Packages</a></li>
+                                <li  v-for="menu in menus.footer_menu_2" class="page-item">
+                                    <Link :href="menu.link">{{menu.label}}</Link>
+                                </li>
                             </ul>
                         </div>
                     </div><!-- ends: .col-lg-3 -->
@@ -34,11 +28,9 @@
                         <div class="widget widget_social">
                             <h2 class="widget-title">Connect with Us</h2>
                             <ul class="list-unstyled social-list">
-                                <li><a href=""><span class="mail"><i class="la la-envelope"></i></span> Contact Support</a></li>
-                                <li><a href=""><span class="twitter"><i class="fab fa-twitter"></i></span> Twitter</a></li>
-                                <li><a href=""><span class="facebook"><i class="fab fa-facebook-f"></i></span> Facebook</a></li>
-                                <li><a href=""><span class="instagram"><i class="fab fa-instagram"></i></span> Instagram</a></li>
-                                <li><a href=""><span class="gplus"><i class="fab fa-google-plus-g"></i></span> Google+</a></li>
+                                <li  v-for="menu in menus.footer_menu_3" class="page-item">
+                                    <Link :href="menu.link">{{menu.label}}</Link>
+                                </li>
                             </ul>
                         </div><!-- ends: .widget -->
                     </div><!-- ends: .col-lg-3 -->
@@ -63,7 +55,7 @@
                     <div class="col-lg-12">
                         <div class="footer-bottom--content">
                             <a href="" class="footer-logo"><img src="img/logo.png" alt=""></a>
-                            <p class="m-0 copy-text">©2019 Direo. Made with <span class="la la-heart-o"></span> by <a href="">Aazztech</a></p>
+                            <p class="m-0 copy-text">©2022 Lskit. Made with <span class="la la-heart-o"></span> by <a href="">Aazztech</a></p>
                             <ul class="list-unstyled lng-list">
                                 <li><a href="">English</a></li>
                             </ul>
@@ -76,7 +68,16 @@
     </div>
 </template>
 <script>
+import {Link} from '@inertiajs/inertia-vue3'
 export default {
+    components: {
+        Link,
+    },
+    data() {
+        return {
+            menus: this.$page.props.menu,
+        }
+    }
 
 }
 </script>
