@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 
+
 Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
 
@@ -83,5 +84,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Setting
     Route::get('/setting', 'SettingController@index')->name('setting.index');
     Route::post('/setting/update', 'SettingController@update')->name('setting.update');
+
+    Route::get('/link', function(){
+        \Artisan::call('storage:link');
+    });
 
 });

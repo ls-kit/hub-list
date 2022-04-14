@@ -24689,6 +24689,8 @@ var _hoisted_21 = {
 
 var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Explore All");
 
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section class=\"listing-cards section-bg section-padding\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-12\"><div class=\"section-title\"><h2>Jop openings</h2><p>Explore the popular listings around the world</p></div></div><div class=\"listing-cards-wrapper job-opening col-lg-12\"><div class=\"row\"><div class=\"col-lg-4 col-sm-6\"><div class=\"atbd_single_listing\"><article class=\"atbd_single_listing_wrapper\"><div class=\"item-wrapper-top d-flex align-items-center\"><div class=\"img mr-3\"><img src=\"https://main.mylistingtheme.com/wp-content/uploads/sites/6/2019/11/logo60-1-150x150.jpg\" alt=\"\"></div><div class=\"info\"><h4 class=\"title mb-2\">Full stack developer</h4><span class=\"loc sm-txt mr-2\"><i class=\"la la-map-marker\"></i> Chivers Rd </span><span class=\"phn sm-txt\"><i class=\"icon-location-pin-check-2 sm-icon\"></i> +88745247 </span></div></div><div class=\"item-wrapper-bottom\"><div class=\"position sm-txt d-flex align-items-center\"><i class=\"la la-map-marker icon-bg\"></i> Part Time </div></div></article><!-- atbd_single_listing_wrapper --></div></div><!-- ends: .col-lg-4 --><div class=\"col-lg-4 col-sm-6\"><div class=\"atbd_single_listing\"><article class=\"atbd_single_listing_wrapper\"><div class=\"item-wrapper-top d-flex align-items-center\"><div class=\"img mr-3\"><img src=\"https://main.mylistingtheme.com/wp-content/uploads/sites/6/2019/11/logo60-1-150x150.jpg\" alt=\"\"></div><div class=\"info\"><h4 class=\"title mb-2\">Full stack developer</h4><span class=\"loc sm-txt mr-2\"><i class=\"la la-map-marker\"></i> Chivers Rd </span><span class=\"phn sm-txt\"><i class=\"icon-location-pin-check-2 sm-icon\"></i> +88745247 </span></div></div><div class=\"item-wrapper-bottom\"><div class=\"position sm-txt d-flex align-items-center\"><i class=\"la la-map-marker icon-bg\"></i> Part Time </div></div></article><!-- atbd_single_listing_wrapper --></div></div><!-- ends: .col-lg-4 --><div class=\"col-lg-4 col-sm-6\"><div class=\"atbd_single_listing\"><article class=\"atbd_single_listing_wrapper\"><div class=\"item-wrapper-top d-flex align-items-center\"><div class=\"img mr-3\"><img src=\"https://main.mylistingtheme.com/wp-content/uploads/sites/6/2019/11/logo60-1-150x150.jpg\" alt=\"\"></div><div class=\"info\"><h4 class=\"title mb-2\">Full stack developer</h4><span class=\"loc sm-txt mr-2\"><i class=\"la la-map-marker\"></i> Chivers Rd </span><span class=\"phn sm-txt\"><i class=\"icon-location-pin-check-2 sm-icon\"></i> +88745247 </span></div></div><div class=\"item-wrapper-bottom\"><div class=\"position sm-txt d-flex align-items-center\"><i class=\"la la-map-marker icon-bg\"></i> Part Time </div></div></article><!-- atbd_single_listing_wrapper --></div></div><!-- ends: .col-lg-4 --></div></div><!-- ends: .listing-cards-wrapper --></div></div></section>", 1);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
 
@@ -24725,7 +24727,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ends: .listing-cards-wrapper ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ends: .listing-cards ")]);
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ends: .listing-cards-wrapper ")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ends: .listing-cards "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" job opening card  "), _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ends: .listing-cards ")]);
 }
 
 /***/ }),
@@ -25514,6 +25516,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.loader-container[data-v-0ddc26c4] {\n    text-align: center;\n}\n.loader[data-v-0ddc26c4] {\n  width: 48px;\n  height: 48px;\n  border: 3px solid #FFF;\n  border-radius: 50%;\n  display: inline-block;\n  position: relative;\n  box-sizing: border-box;\n  -webkit-animation: rotation-0ddc26c4 1s linear infinite;\n          animation: rotation-0ddc26c4 1s linear infinite;\n}\n.loader[data-v-0ddc26c4]::after {\n  content: '';\n  box-sizing: border-box;\n  position: absolute;\n  left: 0;\n  top: 0;\n  background: #f5548e;\n  width: 16px;\n  height: 16px;\n  transform: translate(-50%, 50%);\n  border-radius: 50%;\n}\n@-webkit-keyframes rotation-0ddc26c4 {\n0% {\n    transform: rotate(0deg);\n}\n100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes rotation-0ddc26c4 {\n0% {\n    transform: rotate(0deg);\n}\n100% {\n    transform: rotate(360deg);\n}\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n/* job opening css start  */\n.job-opening .item-wrapper-top {\n\tborder-left: 3px solid #903af9;\n\tpadding: 15px;\n\tpadding-bottom: 10px;\n}\n.job-opening .item-wrapper-top img {\n\twidth: 45px;\n\theight: 45px;\n\t-o-object-fit: contain;\n\t   object-fit: contain;\n\tborder-radius: 50%;\n}\n.job-opening .item-wrapper-top .title {\n\tcolor: #242429;\n\tfont-size: 14px;\n\tline-height: 17.5px;\n\tfont-weight: 600;\n}\n.job-opening .sm-txt {\n\tcolor: #242429;\n\tfont-size: 14px;\n\tline-height: 18.5667px;\n\tfont-weight: 400;\n}\n.job-opening .item-wrapper-bottom {\n\tborder-top: 1px solid #e3e3e3;\n    padding: 15px;\n}\n.job-opening .icon-bg {\n\tbackground-color: #6c1cff;\n\twidth: 30px;\n\theight: 30px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\tcolor: #fff;\n\tborder-radius: 50%;\n\toverflow: hidden;\n\tmin-width: 30px;\n\tmargin-right: 10px;\n\tfont-size: 17px;\n}\n/* job opening css end */\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -61069,6 +61095,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ListingSection_vue_vue_type_style_index_0_id_2c3696b4_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ListingSection_vue_vue_type_style_index_0_id_2c3696b4_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ListingSection_vue_vue_type_style_index_0_id_2c3696b4_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
@@ -61750,13 +61806,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ListingSection_vue_vue_type_template_id_2c3696b4_lang_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListingSection.vue?vue&type=template&id=2c3696b4&lang=true */ "./resources/js/Sections/ListingSection.vue?vue&type=template&id=2c3696b4&lang=true");
 /* harmony import */ var _ListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ListingSection.vue?vue&type=script&lang=js */ "./resources/js/Sections/ListingSection.vue?vue&type=script&lang=js");
-/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _ListingSection_vue_vue_type_style_index_0_id_2c3696b4_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css */ "./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css");
+/* harmony import */ var _shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ListingSection_vue_vue_type_template_id_2c3696b4_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/ListingSection.vue"]])
+
+
+const __exports__ = /*#__PURE__*/(0,_shared_httpd_hub_listing_hub_listing_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_ListingSection_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ListingSection_vue_vue_type_template_id_2c3696b4_lang_true__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Sections/ListingSection.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -62402,6 +62461,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Loader_vue_vue_type_style_index_0_id_0ddc26c4_lang_css_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Loader.vue?vue&type=style&index=0&id=0ddc26c4&lang=css&scoped=true */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Components/Loader.vue?vue&type=style&index=0&id=0ddc26c4&lang=css&scoped=true");
+
+
+/***/ }),
+
+/***/ "./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ListingSection_vue_vue_type_style_index_0_id_2c3696b4_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Sections/ListingSection.vue?vue&type=style&index=0&id=2c3696b4&lang=css");
 
 
 /***/ }),
