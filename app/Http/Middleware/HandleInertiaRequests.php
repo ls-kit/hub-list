@@ -47,6 +47,7 @@ class HandleInertiaRequests extends Middleware
             'menu.footer_menu_1' => Menu::getByName('footer_menu_1'),
             'menu.footer_menu_2' => Menu::getByName('footer_menu_2'),
             'menu.footer_menu_3' => Menu::getByName('footer_menu_3'),
+            'settings' => \App\Setting::first(),
         ]);
     }
 }

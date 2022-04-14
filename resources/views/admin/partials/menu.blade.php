@@ -121,7 +121,15 @@
                 </a>
             </li>
             @endcan
-
+            @can('menu_builder_access')
+            <li class="nav-item">
+                <a href="{{ route("admin.setting.index") }}" class="nav-link {{ request()->is('admin/setting') || request()->is('admin/setting/*') ? 'active' : '' }}">
+                    <i class="fa-fw fas fa-list nav-icon"></i>
+                   Settings 
+                </a>
+            </li>
+            @endcan
+            
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">

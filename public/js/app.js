@@ -21222,7 +21222,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       toggle: false,
-      menus: this.$page.props.menu
+      menus: this.$page.props.menu,
+      logo: '/images/' + this.$page.props.settings.logo
     };
   },
   methods: {
@@ -21916,15 +21917,7 @@ var _hoisted_8 = {
 var _hoisted_9 = {
   "class": "logo logo-top"
 };
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "/frontend/img/logo-white.png",
-  alt: "logo image",
-  "class": "img-fluid"
-}, null, -1
-/* HOISTED */
-);
-
+var _hoisted_10 = ["src"];
 var _hoisted_11 = {
   "class": "menu-container order-lg-1 order-sm-0"
 };
@@ -22083,7 +22076,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     href: "/"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_10];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+        src: $data.logo,
+        alt: "logo image",
+        "class": "img-fluid",
+        style: {
+          "width": "100px"
+        }
+      }, null, 8
+      /* PROPS */
+      , _hoisted_10)];
     }),
     _: 1
     /* STABLE */

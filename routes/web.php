@@ -80,4 +80,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('person/media', 'SkilledPersonController@storeMedia')->name('person.storeMedia');
     Route::resource('/person', 'SkilledPersonController');
 
+    // Setting
+    Route::get('/setting', 'SettingController@index')->name('setting.index');
+    Route::post('/setting/update', 'SettingController@update')->name('setting.update');
+
 });
